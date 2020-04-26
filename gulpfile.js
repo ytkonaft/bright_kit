@@ -9,7 +9,6 @@ const del = require("del");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const { argv } = require("yargs");
-
 const browserify = require("browserify");
 const babelify = require("babelify");
 const buffer = require("vinyl-buffer");
@@ -53,7 +52,7 @@ function scripts() {
     transform: babelify,
     debug: true,
   });
-
+  console.log($)
   return b
     .bundle()
     .pipe(source("bundle.js"))
