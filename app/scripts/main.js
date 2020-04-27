@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $ from 'jquery';
 
-const body = $("body");
+const body = $('body');
 console.log(body[0]);
