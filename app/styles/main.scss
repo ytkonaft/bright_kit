@@ -1,6 +1,6 @@
 @import "_core";
 
-body {
-  background-color: #333;
-  color: #fff;
-}
+@import "_vars";
+@import "_fonts";
+
+@import "_common.scss";

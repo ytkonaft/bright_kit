@@ -1,0 +1,116 @@
+@import "_vars";
+
+.section-colors {
+  &__color {
+    padding-top: 56px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.color-examples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ball-color {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+.primary {
+  background-color: $primary;
+}
+.secondary {
+  background-color: $secondary;
+}
+.black {
+  background-color: $black;
+}
+.gray {
+  background-color: $gray;
+}
+.light {
+  background-color: $light-gray;
+}
+
+.main-title {
+  font: normal bold 72px/87px "Inter";
+  letter-spacing: -0.8px;
+  color: #515151;
+  padding-top: 99px;
+  margin-bottom: 75px;
+}
+
+.title-border {
+  border-bottom: 4px solid #eeeeee;
+  margin-bottom: 56px;
+}
+
+.color-title {
+  font: normal 600 35px/42px "Inter";
+  text-align: center;
+  letter-spacing: -0.77875px;
+  margin-bottom: 8px;
+  color: $black;
+}
+
+.color-text {
+  font: normal 24px/29px "Inter";
+  text-align: center;
+  letter-spacing: -0.77875px;
+
+  color: $black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+}
+
+.section-tapography {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 135px;
+  }
+}
+
+.btn-title {
+  font: normal 30px/36px "Inter";
+}
+.btn-value {
+  p {
+    display: inline;
+    margin-right: 20px;
+    &:nth-child(1) {
+      font: $btn-80px;
+      letter-spacing: -0.85px;
+      color: $black;
+    }
+    &:nth-child(2) {
+      font: $btn-64px;
+      letter-spacing: -0.68px;
+      color: $black;
+    }
+    &:nth-child(3) {
+      font: $btn-48px;
+      letter-spacing: -0.51px;
+      color: $black;
+    }
+    &:nth-child(4) {
+      font: $btn-32px;
+      letter-spacing: -0.34px;
+      color: $black;
+    }
+    &:nth-child(5) {
+      font: $btn-24px;
+      letter-spacing: -0.26px;
+      color: $black;
+    }
+  }
+}

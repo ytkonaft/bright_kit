@@ -1,0 +1,60 @@
+@import "_vars";
+
+body {
+  font: $font-body;
+}
+
+.title {
+  &__h1 {
+    font: $font-h1;
+    letter-spacing: -1.78px;
+    color: $black;
+  }
+  &__h2 {
+    font: $font-h2;
+    letter-spacing: -1.34px;
+    color: $black;
+  }
+  &__h3 {
+    font: $font-h3;
+    letter-spacing: -0.89px;
+    color: $black;
+  }
+  &__h4 {
+    font: $font-h4;
+    letter-spacing: -0.64px;
+    color: $black;
+  }
+  &__h5 {
+    font: $font-h5;
+    letter-spacing: -0.47px;
+    color: $black;
+  }
+  &__h6 {
+    font: $font-h6;
+    letter-spacing: -0.33px;
+    color: $black;
+  }
+  &__caption {
+    font: $font-caption;
+    letter-spacing: -0.09px;
+    color: $black;
+  }
+  &__small {
+    font: $font-small;
+    letter-spacing: 0.01px;
+    color: $black;
+  }
+  &__tiny {
+    font: $font-tiny;
+    letter-spacing: 0.1px;
+    color: $black;
+  }
+}
+.text-bold {
+  font-weight: $bold;
+}
+
+.text-medium {
+  font-weight: $medium;
+}
