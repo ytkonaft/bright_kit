@@ -40,50 +40,44 @@ body {
 
 //  button
 
-button {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
 .section-btn {
   padding: 40px 0 0;
   &__extra-small {
-    .border-btn-black,
-    .border-btn-primary,
-    .border-btn-secondary {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary {
       padding: 0 11px;
       line-height: 20px;
     }
   }
   &__small {
-    .border-btn-black,
-    .border-btn-primary,
-    .border-btn-secondary {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary {
       padding: 0 16px;
       line-height: 28px;
     }
   }
   &__medium {
-    .border-btn-black,
-    .border-btn-primary,
-    .border-btn-secondary {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary {
       padding: 0 25px;
       line-height: 44px;
     }
   }
   &__large {
-    .border-btn-black,
-    .border-btn-primary,
-    .border-btn-secondary {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary {
       padding: 0 33px;
       line-height: 60px;
     }
   }
   &__extra-large {
-    .border-btn-black,
-    .border-btn-primary,
-    .border-btn-secondary {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary {
       padding: 0 43px;
       line-height: 76px;
     }
@@ -99,3 +93,5 @@ button {
   display: flex;
   justify-content: space-around;
 }
+
+// l
