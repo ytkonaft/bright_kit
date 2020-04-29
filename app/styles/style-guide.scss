@@ -88,27 +88,27 @@ ul {
     display: inline;
     margin-right: 20px;
     &:nth-child(1) {
-      font: $btn-80px;
+      font: $font-btn-extra-large;
       letter-spacing: -0.85px;
       color: $black;
     }
     &:nth-child(2) {
-      font: $btn-64px;
+      font: $font-btn-large;
       letter-spacing: -0.68px;
       color: $black;
     }
     &:nth-child(3) {
-      font: $btn-48px;
+      font: $font-btn-medium;
       letter-spacing: -0.51px;
       color: $black;
     }
     &:nth-child(4) {
-      font: $btn-32px;
+      font: $font-btn-small;
       letter-spacing: -0.34px;
       color: $black;
     }
     &:nth-child(5) {
-      font: $btn-24px;
+      font: $font-btn-extra-small;
       letter-spacing: -0.26px;
       color: $black;
     }

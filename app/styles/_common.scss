@@ -75,26 +75,26 @@ h6 {
 
   &__xs {
     padding: 0 13px;
-    font: $btn-24px;
+    font: $font-btn-extra-small;
     letter-spacing: -0.26px;
   }
   &__sm {
-    font: $btn-32px;
+    font: $font-btn-small;
     padding: 0 18px;
     letter-spacing: -0.34px;
   }
   &__md {
-    font: $btn-48px;
+    font: $font-btn-medium;
     padding: 0 27px;
     letter-spacing: -0.51px;
   }
   &__lg {
-    font: $btn-64px;
+    font: $font-btn-large;
     padding: 0 35px;
     letter-spacing: -0.68px;
   }
   &__xl {
-    font: $btn-80px;
+    font: $font-btn-extra-large;
     padding: 0 45px;
     letter-spacing: -0.85px;
   }
@@ -120,22 +120,19 @@ h6 {
   background-color: $secondary;
 }
 
-.br-black {
-  border: 2px solid $black;
+.border-btn-black {
+  border: $border-width-btn solid $black;
   box-sizing: border-box;
-  line-height: 20px;
 }
 
-.br-primary {
-  border: 2px solid #ff7171;
+.border-btn-primary {
+  border: $border-width-btn solid $primary;
   box-sizing: border-box;
   color: $primary;
-  line-height: 20px;
 }
 
-.br-secondary {
-  border: 2px solid #fff0ae;
+.border-btn-secondary {
+  border: $border-width-btn solid $secondary;
   box-sizing: border-box;
   color: $secondary;
-  line-height: 20px;
 }
