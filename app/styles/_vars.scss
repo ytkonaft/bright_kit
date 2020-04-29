@@ -17,20 +17,20 @@ $italic: italic;
 $normal: normal;
 
 // font-size
-$font-h1: normal $regular 80px/81px $main-font;
-$font-h2: normal $regular 60px/70px $main-font;
-$font-h3: normal $regular 40px/48px $main-font;
-$font-h4: normal $regular 30px/44px $main-font;
-$font-h5: normal $regular 24px/38px $main-font;
-$font-h6: normal $regular 20px/34px $main-font;
-$font-body: normal $regular 16px/28px $main-font;
-$font-caption: normal $regular 14px/24px $main-font;
-$font-small: normal $regular 12px/21px $main-font;
-$font-tiny: normal $regular 10px/16px $main-font;
+$font-h1: $normal $regular 80px/81px $main-font;
+$font-h2: $normal $regular 60px/70px $main-font;
+$font-h3: $normal $regular 40px/48px $main-font;
+$font-h4: $normal $regular 30px/44px $main-font;
+$font-h5: $normal $regular 24px/38px $main-font;
+$font-h6: $normal $regular 20px/34px $main-font;
+$font-body: $normal $regular 16px/28px $main-font;
+$font-caption: $normal $regular 14px/24px $main-font;
+$font-small: $normal $regular 12px/21px $main-font;
+$font-tiny: $normal $regular 10px/16px $main-font;
 
 // button
-$btn-80px: normal bold 40px/80px "Inter";
-$btn-64px: normal bold 32px/46px "Inter";
-$btn-48px: normal bold 24px/48px "Inter";
-$btn-32px: normal bold 16px/21px "Inter";
-$btn-24px: normal bold 12px/24px "Inter";
+$btn-80px: $normal $bold 40px/80px $main-font;
+$btn-64px: $normal $bold 32px/64px $main-font;
+$btn-48px: $normal $bold 24px/48px $main-font;
+$btn-32px: $normal $bold 16px/32px $main-font;
+$btn-24px: $normal $bold 12px/24px $main-font;

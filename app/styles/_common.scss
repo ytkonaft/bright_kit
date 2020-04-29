@@ -4,6 +4,15 @@ body {
   font: $font-body;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .title {
   &__h1 {
     font: $font-h1;
@@ -57,4 +66,70 @@ body {
 
 .text-medium {
   font-weight: $medium;
+}
+
+// button
+
+.btn {
+  color: $black;
+
+  &__xs {
+    padding: 0 13px;
+    font: $btn-24px;
+    letter-spacing: -0.26px;
+  }
+  &__sm {
+    font: $btn-32px;
+    padding: 0 18px;
+    letter-spacing: -0.34px;
+  }
+  &__md {
+    font: $btn-48px;
+    padding: 0 27px;
+    letter-spacing: -0.51px;
+  }
+  &__lg {
+    font: $btn-64px;
+    padding: 0 35px;
+    letter-spacing: -0.68px;
+  }
+  &__xl {
+    font: $btn-80px;
+    padding: 0 45px;
+    letter-spacing: -0.85px;
+  }
+}
+
+.bg-black {
+  color: #fff;
+  background-color: $black;
+}
+
+.bg-primary {
+  color: #fff;
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.br-black {
+  border: 2px solid $black;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+
+.br-primary {
+  border: 2px solid #ff7171;
+  box-sizing: border-box;
+  color: $primary;
+  line-height: 20px;
+}
+
+.br-secondary {
+  border: 2px solid #fff0ae;
+  box-sizing: border-box;
+  color: $secondary;
+  line-height: 20px;
 }

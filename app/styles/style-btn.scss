@@ -1,0 +1,56 @@
+@import "_vars";
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.section-btn {
+  padding: 40px 0 0;
+  &__extra-small {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__small {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    .br-black,
+    .br-primary,
+    .br-secondary {
+      padding: 0 16px;
+    }
+  }
+  &__medium {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    .br-black,
+    .br-primary,
+    .br-secondary {
+      padding: 0 25px;
+    }
+  }
+  &__large {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    .br-black,
+    .br-primary,
+    .br-secondary {
+      padding: 0 33px;
+    }
+  }
+  &__extra-large {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    .br-black,
+    .br-primary,
+    .br-secondary {
+      padding: 0 43px;
+    }
+  }
+}
