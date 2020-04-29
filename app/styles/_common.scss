@@ -98,6 +98,12 @@ h6 {
     padding: 0 45px;
     letter-spacing: -0.85px;
   }
+  &__subscribe {
+    font: $btn-subscribe;
+    padding: 0 112px;
+    letter-spacing: -0.68px;
+    border: 2px solid #3d3d3d;
+  }
 }
 
 .bg-black {
