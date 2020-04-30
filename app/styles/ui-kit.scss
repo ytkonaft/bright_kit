@@ -13,7 +13,7 @@ body {
       flex-direction: column;
       justify-content: center;
       font-size: 15px;
-      background-color: #fff;
+      background-color: $white;
       padding: 30px 5px;
       width: 150px;
       text-align: center;
@@ -36,4 +36,73 @@ body {
       padding: 25px 0 0;
     }
   }
+}
+
+//  button
+
+.section-btn {
+  padding: 40px 0 0;
+  &__extra-small {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary,
+    .btn-white {
+      padding: 0 11px;
+      line-height: 20px;
+    }
+  }
+  &__small {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary,
+    .btn-white {
+      padding: 0 16px;
+      line-height: 28px;
+    }
+  }
+  &__medium {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary,
+    .btn-white {
+      padding: 0 25px;
+      line-height: 44px;
+    }
+  }
+  &__large {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary,
+    .btn-white {
+      padding: 0 33px;
+      line-height: 60px;
+    }
+  }
+  &__extra-large {
+    .btn-border-black,
+    .btn-border-primary,
+    .btn-border-secondary,
+    .btn-white {
+      padding: 0 43px;
+      line-height: 76px;
+    }
+  }
+  &__subscribe {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.wrap {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+// l
+.section-link {
+  padding: 30px 0;
+}
+.link-wrap {
+  display: flex;
 }

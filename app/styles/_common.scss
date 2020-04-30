@@ -4,57 +4,205 @@ body {
   font: $font-body;
 }
 
-.title {
-  &__h1 {
-    font: $font-h1;
-    letter-spacing: -1.78px;
-    color: $black;
-  }
-  &__h2 {
-    font: $font-h2;
-    letter-spacing: -1.34px;
-    color: $black;
-  }
-  &__h3 {
-    font: $font-h3;
-    letter-spacing: -0.89px;
-    color: $black;
-  }
-  &__h4 {
-    font: $font-h4;
-    letter-spacing: -0.64px;
-    color: $black;
-  }
-  &__h5 {
-    font: $font-h5;
-    letter-spacing: -0.47px;
-    color: $black;
-  }
-  &__h6 {
-    font: $font-h6;
-    letter-spacing: -0.33px;
-    color: $black;
-  }
-  &__caption {
-    font: $font-caption;
-    letter-spacing: -0.09px;
-    color: $black;
-  }
-  &__small {
-    font: $font-small;
-    letter-spacing: 0.01px;
-    color: $black;
-  }
-  &__tiny {
-    font: $font-tiny;
-    letter-spacing: 0.1px;
-    color: $black;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
+
+.title-h1 {
+  font: $font-h1;
+  letter-spacing: -1.78px;
+  color: $black;
+}
+.title-h2 {
+  font: $font-h2;
+  letter-spacing: -1.34px;
+  color: $black;
+}
+.title-h3 {
+  font: $font-h3;
+  letter-spacing: -0.89px;
+  color: $black;
+}
+.title-h4 {
+  font: $font-h4;
+  letter-spacing: -0.64px;
+  color: $black;
+}
+.title-h5 {
+  font: $font-h5;
+  letter-spacing: -0.47px;
+  color: $black;
+}
+.title-h6 {
+  font: $font-h6;
+  letter-spacing: -0.33px;
+  color: $black;
+}
+.title-caption {
+  font: $font-caption;
+  letter-spacing: -0.09px;
+  color: $black;
+}
+.title-small {
+  font: $font-small;
+  letter-spacing: 0.01px;
+  color: $black;
+}
+.title-tiny {
+  font: $font-tiny;
+  letter-spacing: 0.1px;
+  color: $black;
+}
+
 .text-bold {
   font-weight: $bold;
 }
 
 .text-medium {
   font-weight: $medium;
+}
+
+// button
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: 0 !important;
+}
+
+.btn-xs {
+  padding: 0 13px;
+  font: $font-btn-extra-small;
+  letter-spacing: -0.26px;
+}
+.btn-sm {
+  font: $font-btn-small;
+  padding: 0 18px;
+  letter-spacing: -0.34px;
+}
+.btn-md {
+  font: $font-btn-medium;
+  padding: 0 27px;
+  letter-spacing: -0.51px;
+}
+.btn-lg {
+  font: $font-btn-large;
+  padding: 0 35px;
+  letter-spacing: -0.68px;
+}
+.btn-xl {
+  font: $font-btn-extra-large;
+  padding: 0 45px;
+  letter-spacing: -0.85px;
+}
+.btn-subscribe {
+  font: $font-btn-subscribe;
+  padding: 0 112px;
+  letter-spacing: -0.68px;
+  border: $border-width-btn solid $black;
+}
+
+.btn {
+  background-color: $white;
+  color: $black;
+}
+
+.btn-white {
+  color: $white;
+  border: $border-width-btn solid $white;
+  box-sizing: border-box;
+}
+
+.btn-black {
+  color: $white;
+  background-color: $black;
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $primary;
+}
+
+.btn-secondary {
+  background-color: $secondary;
+}
+
+.btn-border-black {
+  border: $border-width-btn solid $black;
+  box-sizing: border-box;
+}
+
+.btn-border-primary {
+  border: $border-width-btn solid $primary;
+  box-sizing: border-box;
+  color: $primary;
+}
+
+.btn-border-secondary {
+  border: $border-width-btn solid $secondary;
+  box-sizing: border-box;
+  color: $secondary;
+}
+
+a.link-btn {
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    color: $black;
+  }
+}
+
+.link-xs {
+  font: $font-btn-extra-small;
+  height: $height-link-xs;
+  i {
+    margin-left: 2px;
+    font-size: 16px;
+  }
+}
+
+.link-sm {
+  font: $font-btn-small;
+  height: $height-link-sm;
+  i {
+    margin-left: 4px;
+    font-size: 24px;
+  }
+}
+
+.link-md {
+  font: $font-btn-medium;
+  height: $height-link-md;
+  i {
+    margin-left: 8px;
+    font-size: 32px;
+  }
+}
+.link-lg {
+  font: $font-btn-large;
+  height: $height-link-lg;
+  i {
+    margin-left: 8px;
+    font-size: 40px;
+  }
+}
+.link-xl {
+  font: $font-btn-extra-large;
+  height: $height-link-xl;
+  i {
+    margin-left: 8px;
+    font-size: 48px;
+  }
 }
