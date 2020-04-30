@@ -76,11 +76,11 @@
 .icon-bell:before {
   content: "\e910";
 }
-.icon-notification-badge .path1:before {
+.icon-notification-badge:before {
   content: "\e911";
   color: rgb(61, 61, 61);
 }
-.icon-notification-badge .path2:before {
+.icon-notification-badge:after {
   content: "\e912";
   margin-left: -1em;
   color: rgb(255, 113, 113);
