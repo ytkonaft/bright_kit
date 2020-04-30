@@ -3,6 +3,7 @@ $secondary: #fff0ae;
 $black: #3d3d3d;
 $gray: #989898;
 $light-gray: #f6f6f6;
+$white: #ffffff;
 
 // font-family
 $main-font: "Inter";
@@ -30,6 +31,13 @@ $font-tiny: $normal $regular 10px/16px $main-font;
 
 // border-width
 $border-width-btn: 2px;
+
+// height-link
+$height-link-xs: 24px;
+$height-link-sm: 32px;
+$height-link-md: 48px;
+$height-link-lg: 64px;
+$height-link-xl: 80px;
 
 // button
 $font-btn-extra-large: $normal $bold 40px/80px $main-font;

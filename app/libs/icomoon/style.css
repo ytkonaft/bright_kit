@@ -25,163 +25,168 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-contact:before {
+.icon-plus:before {
   content: "\e900";
 }
-.icon-training:before {
+.icon-plus-black:before {
   content: "\e901";
 }
-.icon-star-black:before {
+.icon-plus-white:before {
   content: "\e902";
 }
-.icon-star-white:before {
+.icon-calendar:before {
   content: "\e903";
 }
-.icon-share:before {
+.icon-truck:before {
   content: "\e904";
 }
-.icon-search:before {
+.icon-tick:before {
   content: "\e905";
 }
-.icon-phone:before {
+.icon-cross:before {
   content: "\e906";
 }
-.icon-message:before {
+.icon-four-dots:before {
   content: "\e907";
 }
-.icon-mark:before {
+.icon-letter:before {
   content: "\e908";
 }
-.icon-love-black:before {
+.icon-smile:before {
   content: "\e909";
 }
-.icon-love-white:before {
+.icon-present:before {
   content: "\e90a";
 }
 .icon-menu:before {
   content: "\e90b";
 }
-.icon-present:before {
+.icon-love-white:before {
   content: "\e90c";
 }
-.icon-smile:before {
+.icon-love-black:before {
   content: "\e90d";
 }
-.icon-letter:before {
+.icon-mark:before {
   content: "\e90e";
 }
-.icon-four-dots:before {
+.icon-message:before {
   content: "\e90f";
 }
-.icon-cross:before {
+.icon-bell:before {
   content: "\e910";
 }
-.icon-truck:before {
+.icon-notification-badge .path1:before {
   content: "\e911";
+  color: rgb(61, 61, 61);
 }
-.icon-calendar:before {
+.icon-notification-badge .path2:before {
   content: "\e912";
-}
-.icon-vertical-three-dots:before {
-  content: "\e913";
+  margin-left: -1em;
+  color: rgb(255, 113, 113);
 }
 .icon-three-dots:before {
+  content: "\e913";
+}
+.icon-vertical-three-dots:before {
   content: "\e914";
 }
-.icon-watch:before {
+.icon-phone:before {
   content: "\e915";
 }
-.icon-plus-white:before {
+.icon-quote:before {
   content: "\e916";
 }
-.icon-plus-black:before {
+.icon-watch:before {
   content: "\e917";
 }
-.icon-plus:before {
+.icon-search:before {
   content: "\e918";
 }
-.icon-indicator:before {
+.icon-settings:before {
   content: "\e919";
-  color: #ff7171;
 }
-.icon-quote:before {
+.icon-share:before {
   content: "\e91a";
 }
-.icon-settings:before {
+.icon-star-white:before {
   content: "\e91b";
 }
-.icon-bell:before {
+.icon-star-black:before {
   content: "\e91c";
 }
-.icon-tick:before {
+.icon-training:before {
   content: "\e91d";
 }
-.icon-up:before {
+.icon-contact:before {
   content: "\e91e";
 }
-.icon-right:before {
+.icon-behance:before {
   content: "\e91f";
 }
-.icon-left:before {
+.icon-dribble:before {
   content: "\e920";
 }
-.icon-down:before {
+.icon-twitter:before {
   content: "\e921";
 }
-.icon-long-right:before {
+.icon-backward:before {
   content: "\e922";
 }
-.icon-long-left:before {
+.icon-forward:before {
   content: "\e923";
 }
-.icon-chevron-up:before {
+.icon-pause:before {
   content: "\e924";
 }
-.icon-chevron-forward:before {
+.icon-play-white:before {
   content: "\e925";
 }
-.icon-chevron-down:before {
+.icon-play-black:before {
   content: "\e926";
 }
-.icon-chevron-back:before {
+.icon-play-black-outline:before {
   content: "\e927";
 }
-.icon-sound-on:before {
+.icon-repeat:before {
   content: "\e928";
 }
-.icon-sound-off:before {
+.icon-shuffle:before {
   content: "\e929";
 }
-.icon-shuffle:before {
+.icon-sound-off:before {
   content: "\e92a";
 }
-.icon-repeat:before {
+.icon-sound-on:before {
   content: "\e92b";
 }
-.icon-play-black:before {
+.icon-down:before {
   content: "\e92c";
 }
-.icon-play-white:before {
+.icon-left:before {
   content: "\e92d";
 }
-.icon-forward:before {
+.icon-right:before {
   content: "\e92e";
 }
-.icon-backward:before {
+.icon-up:before {
   content: "\e92f";
 }
-.icon-play-black-outline:before {
+.icon-long-left:before {
   content: "\e930";
 }
-.icon-pause:before {
+.icon-long-right:before {
   content: "\e931";
 }
-.icon-twitter:before {
+.icon-chevron-back:before {
   content: "\e932";
 }
-.icon-dribble:before {
+.icon-chevron-down:before {
   content: "\e933";
 }
-.icon-behance:before {
+.icon-chevron-forward:before {
   content: "\e934";
+}
+.icon-chevron-up:before {
+  content: "\e935";
 }
