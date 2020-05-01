@@ -9,7 +9,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -67,6 +68,10 @@ h6 {
   font-weight: $medium;
 }
 
+.additional-text {
+  font: $font-h6;
+}
+
 // button
 
 button {
@@ -101,6 +106,15 @@ button {
   padding: 0 45px;
   letter-spacing: -0.85px;
 }
+.menu-btn {
+  font: $font-btn-vertical-menu;
+  padding: 0 16px;
+  letter-spacing: -0.09px;
+  border: 1px solid $gray;
+  box-sizing: border-box;
+  color: $gray;
+}
+
 .btn-subscribe {
   font: $font-btn-subscribe;
   padding: 0 112px;

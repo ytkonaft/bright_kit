@@ -1,0 +1,54 @@
+@import "_vars";
+
+.vertical-menu {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.user-menu {
+  display: inline-block;
+  padding: 66px 56px;
+  background-color: $light-gray;
+  margin-top: 30px;
+  &__content {
+    width: 243px;
+  }
+
+  &__user {
+    display: flex;
+  }
+
+  &__text {
+    margin-left: 16px;
+  }
+  &__links {
+    margin: 92px 0 509px;
+    a {
+      color: $black;
+      text-decoration: none;
+      &:active {
+        color: $primary;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    .menu-btn {
+      &:last-child {
+        margin-left: 16px;
+      }
+    }
+  }
+}
