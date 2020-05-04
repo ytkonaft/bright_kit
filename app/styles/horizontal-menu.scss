@@ -1,0 +1,44 @@
+@import "_vars";
+
+.horizontal-menu-one {
+  width: 100%;
+  padding: 24px 0;
+  display: inline-block;
+  background-color: $light-gray;
+
+  &__menu-links {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__menu-icons {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    i {
+      font-size: 32px;
+    }
+  }
+  &__menu-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    margin-left: 32px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    color: $black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary;
+    }
+  }
+}

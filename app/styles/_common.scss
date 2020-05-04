@@ -64,6 +64,11 @@ p {
   letter-spacing: 0.1px;
   color: $black;
 }
+.menu-item {
+  font: $font-body;
+  letter-spacing: -0.18px;
+  color: $black;
+}
 
 .text-bold {
   font-weight: $bold;
