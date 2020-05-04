@@ -10,7 +10,18 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-item {
+    margin-right: 48px;
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+  &__logo {
+    height: 100%;
+    display: flex;
     align-items: center;
   }
   &__menu-icons {
@@ -42,3 +53,6 @@
     }
   }
 }
+
+//ALWAYS END
+@import "_media.scss";
