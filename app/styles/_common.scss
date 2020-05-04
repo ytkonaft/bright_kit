@@ -48,6 +48,7 @@ p {
   font: $font-vertical-menu;
   letter-spacing: -0.33px;
   color: $black;
+  @extend .text-bold;
 }
 .title-caption {
   font: $font-caption;
@@ -245,5 +246,3 @@ a.link-btn {
   width: $width-avatar-lg;
   height: $height-avatar-lg;
 }
-//ALWAYS END
-@import "_media.scss";
