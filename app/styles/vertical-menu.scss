@@ -34,13 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 87%;
-    margin: 92px 0 0;
-    a {
-      color: $black;
-      &:hover {
-        color: $primary;
-      }
-    }
+    margin-top: 95px;
   }
 
   &__button {
@@ -49,11 +43,13 @@
     height: 25px;
     .menu-btn {
       color: $gray;
+      transition: all 0.3s ease;
       &:last-child {
         margin-left: 16px;
       }
       &:hover {
-        color: $primary;
+        color: $light-gray;
+        background-color: $primary;
       }
     }
   }
@@ -62,8 +58,15 @@
     padding: 0;
     list-style: none;
   }
-  &__links-item {
+  &__link-item {
     margin-bottom: 16px;
+    a {
+      color: $black;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $primary;
+      }
+    }
     &:last-child {
       margin-bottom: 0;
     }

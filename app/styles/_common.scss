@@ -44,6 +44,11 @@ p {
   letter-spacing: -0.33px;
   color: $black;
 }
+.title-vertical-menu {
+  font: $font-vertical-menu;
+  letter-spacing: -0.33px;
+  color: $black;
+}
 .title-caption {
   font: $font-caption;
   letter-spacing: -0.09px;
@@ -69,7 +74,7 @@ p {
 }
 
 .additional-text {
-  font: $font-h6;
+  font: $font-additional-text;
 }
 
 // button
