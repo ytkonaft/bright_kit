@@ -49,6 +49,16 @@ p {
   letter-spacing: -0.33px;
   color: $black;
 }
+.title-body {
+  font: $font-body;
+  letter-spacing: -0.18px;
+  color: $black;
+}
+.copyright {
+  font: $font-item-copyright;
+  letter-spacing: 0.01px;
+  color: $gray;
+}
 .title-caption {
   font: $font-caption;
   letter-spacing: -0.09px;

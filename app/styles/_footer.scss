@@ -1,0 +1,34 @@
+@import "_vars";
+
+.footer-one {
+  padding: 40px 0;
+  background-color: $light-gray;
+  &__items {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .footer-item {
+    margin-right: 48px;
+    &:last-child {
+      margin-right: 19px;
+    }
+  }
+  &__copyright {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.footer-item {
+  @extend .title-body;
+  @extend .text-medium;
+  letter-spacing: -0.18px;
+  color: $black;
+}
+.item-copyright {
+  @extend .copyright;
+}
