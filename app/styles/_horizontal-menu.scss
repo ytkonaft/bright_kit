@@ -15,7 +15,7 @@
   }
   .menu-item {
     @extend .text-medium;
-    margin-right: 48px;
+    margin-right: 49px;
     &:last-child {
       margin-right: 20px;
     }
@@ -29,7 +29,7 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     align-items: center;
     i {
       font-size: 32px;
