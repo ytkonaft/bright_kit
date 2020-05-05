@@ -50,6 +50,16 @@ p {
   color: $black;
   @extend .text-bold;
 }
+.title-body {
+  font: $font-body;
+  letter-spacing: -0.18px;
+  color: $black;
+}
+.copyright {
+  font: $font-copyright;
+  letter-spacing: 0.01px;
+  color: $gray;
+}
 .title-caption {
   font: $font-caption;
   letter-spacing: -0.09px;
