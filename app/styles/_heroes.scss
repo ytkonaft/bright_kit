@@ -1,73 +1,12 @@
 @import "_vars";
 
 .heroes-one {
-  background-image: url(../images/illustration-heroes-one.svg);
-  background-repeat: no-repeat;
-  background-position: right 200px top 238px;
-  background-size: auto;
-  &__header {
-    width: 100%;
-    padding: 24px 0;
-    display: inline-block;
-    margin-bottom: 84px;
-  }
-
-  &__wrap {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  &__menu-links {
-    height: 100%;
-    width: 520px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .menu-item {
-    @extend .text-medium;
-    margin-right: 49px;
-  }
-
-  &__logo {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  &__menu-icons {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    i {
-      font-size: 32px;
-    }
-  }
-  &__menu-icon {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin-left: 32px;
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      display: none;
-    }
-  }
-  a {
-    color: $black;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    &:hover {
-      color: $primary;
-    }
-  }
   &__content {
     max-width: 630px;
-    padding: 84px 0 276px;
+    padding: 167px 0 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .heroes-title {
     margin: 22px 0 24px;
@@ -85,17 +24,35 @@
     @extend .btn-xl;
     @extend .btn-black;
     margin-right: 48px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $light-gray;
+      color: $black;
+    }
   }
   &__btn-primary {
     @extend .btn-xl;
     @extend .btn-border-primary;
     line-height: 76px;
     padding: 0 42px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
   &__link-content {
     @extend .menu-item;
     display: inline-block;
     margin-top: 25px;
+    color: $black;
+    text-decoration: none;
+  }
+  &__img {
+    position: absolute;
+    left: 97%;
+    top: 20%;
+    margin-left: 35px;
   }
 }
 .additional-title {
@@ -112,28 +69,18 @@
 
 @media only screen and (max-width: 1200px) {
   .heroes-one {
-    &__menu-links {
-      justify-content: center;
-    }
-    .menu-item {
-      margin-right: 35px;
+    &__img {
+      position: static;
+      margin: 0 0 50px;
     }
   }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .heroes-one {
-    .menu-item {
-      display: none;
-    }
-    &__menu-icons {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-    }
-    &__menu-icon {
-      &:last-child {
-        display: inline-block;
-      }
+    &__content {
+      padding-top: 50px;
+      max-width: 550px;
     }
   }
 }
@@ -141,11 +88,14 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .heroes-one {
-    &__logo {
-      justify-content: center;
+    &__img {
+      width: 450px;
+      height: 450px;
     }
-    &__menu-icons {
-      justify-content: center;
+    &__btn-black {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 25px 0;
     }
   }
 }
@@ -153,30 +103,13 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .heroes-one {
-    &__menu-links {
-      justify-content: center;
-    }
-    .menu-item {
-      margin-right: 15px;
-      &:last-child {
-        margin: 0;
-      }
-    }
-    &__menu-icons {
-      justify-content: center;
+    &__img {
+      width: 300px;
+      height: 300px;
     }
   }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .heroes-one {
-    &__menu-links {
-      justify-content: center;
-    }
-
-    &__menu-icons {
-      margin: 0;
-    }
-  }
 }
