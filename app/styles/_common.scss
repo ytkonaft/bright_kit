@@ -48,6 +48,7 @@ p {
   font: $font-vertical-menu;
   letter-spacing: -0.33px;
   color: $black;
+  @extend .text-bold;
 }
 .title-body {
   font: $font-body;
@@ -72,6 +73,11 @@ p {
 .title-tiny {
   font: $font-tiny;
   letter-spacing: 0.1px;
+  color: $black;
+}
+.menu-item {
+  font: $font-body;
+  letter-spacing: -0.18px;
   color: $black;
 }
 
