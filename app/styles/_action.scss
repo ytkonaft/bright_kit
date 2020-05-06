@@ -7,3 +7,15 @@
   display: flex;
   align-items: center;
 }
+
+.additional-title {
+  @extend .title-h4;
+  @extend .text-medium;
+}
+.heroes-title {
+  @extend .title-h1;
+  @extend .text-bold;
+}
+.heroes-text {
+  @extend .title-h5;
+}
