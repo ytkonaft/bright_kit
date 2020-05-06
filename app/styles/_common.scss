@@ -18,6 +18,16 @@ p {
   font: $font-h1;
   letter-spacing: -1.78px;
   color: $black;
+
+  @media only screen and (max-width: 992px) {
+    font: $font-h1-md;
+  }
+  @media only screen and (max-width: 480px) {
+    font: $font-h1-sm;
+  }
+  @media only screen and (max-width: 320px) {
+    font: $font-h1-xs;
+  }
 }
 .title-h2 {
   font: $font-h2;
@@ -38,6 +48,15 @@ p {
   font: $font-h5;
   letter-spacing: -0.47px;
   color: $black;
+  @media only screen and (max-width: 992px) {
+    font: $font-h5-md;
+  }
+  @media only screen and (max-width: 480px) {
+    font: $font-h5-sm;
+  }
+  @media only screen and (max-width: 320px) {
+    font: $font-h5-xs;
+  }
 }
 .title-h6 {
   font: $font-h6;
@@ -124,9 +143,10 @@ button {
 }
 .btn-xl {
   font: $font-btn-extra-large;
-  padding: 0 45px;
+  padding: 5px 45px;
   letter-spacing: -0.85px;
 }
+
 .menu-btn {
   font: $font-btn-vertical-menu;
   padding: 0 16px;
