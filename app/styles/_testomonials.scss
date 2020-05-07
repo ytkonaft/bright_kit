@@ -1,0 +1,199 @@
+@import "_vars";
+
+.testimonials-one {
+  padding: 144px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+    position: relative;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  &__card {
+    max-width: 350px;
+    background-color: $light-gray;
+    padding: 46px 40px;
+    border-radius: 12px;
+  }
+  &__avatar {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+  }
+  &__card-content {
+    margin-bottom: 8px;
+  }
+  &__card-separator {
+    border-bottom: 1px solid $gray;
+  }
+  .card-text {
+    margin-top: 16px;
+  }
+  &__title-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  &__title {
+    @extend .title-h3;
+    @extend .text-bold;
+  }
+
+  .card-right {
+    margin-right: 20px;
+    margin-left: 1px;
+  }
+  .card-left {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .slick-dots {
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center;
+    font: normal;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      // margin-right: 15px;
+      &:nth-child(2) {
+        margin: 0 14px 0 16px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $primary;
+          border: none;
+        }
+      }
+    }
+    button {
+      font-size: 0;
+      border-radius: 50%;
+      border: 2px solid $black;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      padding: 0;
+      cursor: pointer;
+      background-color: $white;
+    }
+  }
+}
+
+.card-title {
+  @extend .title-h6;
+  @extend .text-medium;
+}
+.card-caption {
+  @extend .title-caption;
+}
+.card-text {
+  @extend .title-caption;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .testimonials-one {
+    .card-right {
+      margin-right: 0;
+    }
+    .card-left {
+      margin-left: 0;
+    }
+    &__card {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .testimonials-one {
+    .slick-dots {
+      li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 15px;
+        &:nth-child(2) {
+          margin-left: 0;
+          margin-right: 15px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .testimonials-one {
+    .card-right {
+      margin-right: 0px;
+      margin-left: 10px;
+    }
+    .card-left {
+      margin-left: 0px;
+      margin-right: 0;
+    }
+    &__card {
+      padding: 37px 25px;
+    }
+    .card-text {
+      font-size: 13px;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .testimonials-one {
+    &__title-wrap {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .testimonials-one {
+    .card-right {
+      margin-left: 10px;
+    }
+    .card-left {
+      margin-left: 10px;
+    }
+
+    &__card {
+      margin-right: 5px;
+
+      padding: 37px 18px;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    .slick-dots {
+      li {
+        margin-right: 12px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
