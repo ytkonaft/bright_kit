@@ -119,13 +119,11 @@
   .features-one {
     &__content {
       padding: 7px;
+      margin: 0 auto;
     }
-    .card-right {
-      margin-right: 10px;
-    }
+    .card-right,
     .card-left {
-      margin-left: 5px;
-      margin-right: 7px;
+      margin: 0 auto;
     }
   }
 }
