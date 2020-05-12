@@ -2,7 +2,8 @@ import $ from "jquery";
 import "slick-carousel";
 
 const sliderSlick = [
-  ".testimonials-one .testimonials-one__slider-wrap, .features-one .features-one__slider-wrap",
+  ".testimonials-one .testimonials-one__slider-wrap",
+  ".features-one .features-one__slider-wrap",
 ].join();
 
 $(sliderSlick).slick({

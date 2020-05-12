@@ -20,14 +20,17 @@
     padding: 30px;
     display: flex;
     height: 100%;
+    border-radius: 12px;
   }
   .card-right {
     margin-right: 15px;
+    border-radius: 3px 12px 12px 3px;
   }
 
   .card-left {
     margin-left: 13px;
     margin-right: 15px;
+    border-radius: 12px 3px 3px 12px;
   }
 
   &__card-content {
