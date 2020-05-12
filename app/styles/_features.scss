@@ -36,6 +36,9 @@
   &__card-content {
     margin-left: 16px;
   }
+  img {
+    display: inline-block;
+  }
   &__card-title {
     @extend .title-h5;
     @extend .text-medium;
@@ -106,6 +109,13 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .features-one {
+    .card-right {
+      border-radius: 12px;
+    }
+
+    .card-left {
+      border-radius: 12px;
+    }
     .slick-dots {
       li {
         margin: 0 10px;
@@ -120,10 +130,30 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .features-one {
-    &__content {
-      padding: 7px;
-      margin: 0 auto;
+    .slick-slide,
+    .slick-current,
+    .slick-active {
+      padding-top: 30px;
     }
+    &__card-content {
+      margin: 0;
+    }
+    &__content {
+      padding: 7px 20px;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      a {
+        display: inline-flex;
+      }
+    }
+    &__img-wrap {
+      display: flex;
+      justify-content: center;
+      margin: -37px 0 15px;
+    }
+
     .card-right,
     .card-left {
       margin: 0 auto;
