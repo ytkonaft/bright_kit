@@ -109,13 +109,11 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .features-one {
-    .card-right {
-      border-radius: 12px;
-    }
-
+    .card-right,
     .card-left {
       border-radius: 12px;
     }
+
     .slick-dots {
       li {
         margin: 0 10px;
@@ -167,12 +165,12 @@
     &__content {
       max-width: 100%;
     }
-    .card-right {
+    .card-right,
+    .card-left {
       margin-right: 5px;
     }
     .card-left {
       margin-left: 5px;
-      margin-right: 5px;
     }
     &__title {
       font-size: 30px;
@@ -186,13 +184,7 @@
     &__content {
       padding: 20px;
     }
-    .card-right {
-      margin-right: 5px;
-    }
-    .card-left {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+
     &__title-wrap {
       margin-bottom: 35px;
     }
