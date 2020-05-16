@@ -59,6 +59,13 @@ p {
   letter-spacing: -0.33px;
   color: $black;
 }
+
+.title-fnf {
+  font: $font-fnf;
+  letter-spacing: -3.56px;
+  color: $black;
+}
+
 .title-vertical-menu {
   font: $font-vertical-menu;
   letter-spacing: -0.33px;
@@ -141,6 +148,12 @@ button {
   font: $font-btn-extra-large;
   padding: 5px 45px;
   letter-spacing: -0.85px;
+}
+
+.btn-fnf {
+  padding: 9px 35px;
+  font: $font-btn-fnf;
+  letter-spacing: -0.68px;
 }
 
 .menu-btn {
