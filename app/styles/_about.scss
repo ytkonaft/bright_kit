@@ -1,3 +1,42 @@
-body {
-  background-color: pink;
+.about-one {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/image-about.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 20px center;
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+  }
+
+  &__text {
+    @extend .title-h5;
+    max-width: 455px;
+    margin: 31px 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    @extend .link-sm;
+    @extend .link-btn;
+    margin-right: 32px;
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+  a {
+    margin-bottom: 0;
+    i {
+      color: $primary;
+    }
+  }
 }
