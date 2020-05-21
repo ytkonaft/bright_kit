@@ -24,6 +24,31 @@ $font-h3: $normal $regular 40px/48px $main-font;
 $font-h4: $normal $regular 30px/44px $main-font;
 $font-h5: $normal $regular 24px/38px $main-font;
 $font-h6: $normal $regular 20px/34px $main-font;
+
+// xs
+$font-h1-xs: $normal $regular 35px/40px $main-font;
+$font-h2-xs: $normal $regular 60px/70px $main-font;
+$font-h3-xs: $normal $regular 40px/48px $main-font;
+$font-h4-xs: $normal $regular 30px/44px $main-font;
+$font-h5-xs: $normal $regular 17px/30px $main-font;
+$font-h6-xs: $normal $regular 20px/34px $main-font;
+
+// sm
+$font-h1-sm: $normal $regular 40px/45px $main-font;
+$font-h2-sm: $normal $regular 60px/70px $main-font;
+$font-h3-sm: $normal $regular 40px/48px $main-font;
+$font-h4-sm: $normal $regular 30px/44px $main-font;
+$font-h5-sm: $normal $regular 17px/32px $main-font;
+$font-h6-sm: $normal $regular 20px/34px $main-font;
+
+// md
+$font-h1-md: $normal $regular 60px/61px $main-font;
+$font-h2-md: $normal $regular 60px/70px $main-font;
+$font-h3-md: $normal $regular 40px/48px $main-font;
+$font-h4-md: $normal $regular 30px/44px $main-font;
+$font-h5-md: $normal $regular 20px/38px $main-font;
+$font-h6-md: $normal $regular 20px/34px $main-font;
+
 $font-body: $normal $regular 16px/28px $main-font;
 $font-caption: $normal $regular 14px/24px $main-font;
 $font-small: $normal $regular 12px/21px $main-font;
@@ -37,12 +62,13 @@ $border-width-btn: 2px;
 // height-link
 $height-link-xs: 24px;
 $height-link-sm: 32px;
+$height-link-sm-abuot: 21px;
 $height-link-md: 48px;
 $height-link-lg: 64px;
 $height-link-xl: 80px;
 
 // button
-$font-btn-extra-large: $normal $bold 40px/80px $main-font;
+$font-btn-extra-large: $normal $bold 40px/70px $main-font;
 $font-btn-large: $normal $bold 32px/64px $main-font;
 $font-btn-medium: $normal $bold 24px/48px $main-font;
 $font-btn-small: $normal $bold 16px/32px $main-font;

@@ -1,0 +1,132 @@
+@import "_vars";
+
+.horizontal-menu-one {
+  width: 100%;
+  padding: 24px 0;
+  display: inline-block;
+  background-color: $light-gray;
+
+  &__wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__menu-links {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-item {
+    @extend .text-medium;
+    margin-right: 49px;
+  }
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__menu-icons {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    i {
+      font-size: 32px;
+    }
+  }
+  &__menu-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 32px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  a {
+    color: $black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .horizontal-menu-one {
+    &__menu-links {
+      justify-content: center;
+    }
+    .menu-item {
+      margin-right: 35px;
+    }
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .horizontal-menu-one {
+    .menu-item {
+      display: none;
+    }
+    &__menu-icons {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    &__menu-icon {
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .horizontal-menu-one {
+    &__logo {
+      justify-content: center;
+    }
+    &__menu-icons {
+      justify-content: center;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .horizontal-menu-one {
+    &__menu-links {
+      justify-content: center;
+    }
+    .menu-item {
+      margin-right: 15px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__menu-icons {
+      justify-content: center;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .horizontal-menu-one {
+    &__menu-links {
+      justify-content: center;
+    }
+
+    &__menu-icons {
+      margin: 0;
+    }
+  }
+}
