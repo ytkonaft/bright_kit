@@ -1,0 +1,124 @@
+.team-one {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @extend .title-h6;
+    max-width: 573px;
+    margin: 0 auto;
+  }
+
+  &__party-title {
+    @extend .title-h4;
+    @extend .text-medium;
+  }
+
+  &__party-text {
+    @extend .title-h5;
+  }
+
+  &__team {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__party {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    &:nth-child(2) {
+      margin-left: 78px;
+      margin-right: 76px;
+    }
+  }
+
+  &__party-title {
+    margin-top: 16px;
+  }
+
+  &__party-text {
+    margin-bottom: 8px;
+  }
+
+  &__icon-wrap {
+    i {
+      font-size: 40px;
+      &:nth-child(2) {
+        margin: 0 16px;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .team-one {
+    &__team {
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    &__party {
+      &:nth-child(2) {
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .team-one {
+    &__content {
+      padding: 5px;
+      margin-bottom: 32px;
+    }
+
+    &__party {
+      &:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
