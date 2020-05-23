@@ -116,6 +116,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 12px;
+    transition: all 0.5s ease;
     &:hover {
       background-color: $primary;
       color: $white;
@@ -151,4 +152,32 @@
   a {
     text-decoration: none;
   }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .vertical-menu-one {
+    margin-bottom: 30px;
+
+    &__links {
+      margin-top: 65px;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
 }
