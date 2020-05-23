@@ -68,26 +68,62 @@
   background-color: $light-gray;
   margin-top: 50px;
 
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   &__menu-item {
     @extend .title-body;
     @extend .text-medium;
-    margin-right: 48px;
-    background-color: red;
-    &:nth-child(4) {
-      margin-right: 0;
+    margin-right: 49px;
+
+    color: $black;
+
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary;
     }
   }
 
+  &__menu-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   &__link {
+    width: 60px;
     @extend .link-sm;
     @extend .link-btn;
+    margin-bottom: 0 !important;
+  }
+
+  &__button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    @extend .btn-sm;
+    @extend .btn-border-primary;
+    padding: 5px 16px;
+    line-height: 17px !important;
+    margin-right: 16px;
   }
 
   a {
-    color: $black;
     text-decoration: none;
-    transition: all 0.3s ease;
-    &:hover {
+    i {
       color: $primary;
     }
   }
@@ -101,6 +137,12 @@
     }
     .menu-item {
       margin-right: 35px;
+    }
+  }
+
+  .horizontal-menu-two {
+    &__menu-item {
+      margin-right: 30px;
     }
   }
 }
@@ -120,6 +162,12 @@
       }
     }
   }
+
+  .horizontal-menu-two {
+    &__menu-item {
+      display: none;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -129,6 +177,12 @@
       justify-content: center;
     }
     &__menu-icons {
+      justify-content: center;
+    }
+  }
+
+  .horizontal-menu-two {
+    &__logo {
       justify-content: center;
     }
   }
