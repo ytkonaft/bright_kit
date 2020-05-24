@@ -38,9 +38,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    &:nth-child(2) {
-      margin-left: 78px;
-      margin-right: 76px;
+
+    margin-left: 2px;
+    margin-right: 76px;
+    &:last-child {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -53,10 +56,20 @@
   }
 
   &__icon-wrap {
-    i {
-      font-size: 40px;
-      &:nth-child(2) {
-        margin: 0 16px;
+    a {
+      color: $black;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $primary;
+      }
+      i {
+        font-size: 40px;
+        margin: 0 12px 0 0;
+        &:last-child {
+          margin: 0;
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -90,9 +103,10 @@
     }
 
     &__party {
-      &:nth-child(2) {
-        margin-top: 35px;
-        margin-bottom: 35px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      &:last-child {
+        margin: 0 auto;
       }
     }
   }
@@ -111,10 +125,7 @@
     }
 
     &__party {
-      &:nth-child(2) {
-        margin-left: 0;
-        margin-right: 0;
-      }
+      margin-bottom: 60px;
     }
   }
 }
