@@ -24,3 +24,13 @@ $(".testimonials-one .testimonials-one__slider-wrap").slick({
     },
   ],
 });
+
+$(".testimonials-two .testimonials-two__slider-wrap").slick({
+  dots: true,
+  arrows: false,
+  infinite: true,
+  centerMode: true,
+  // centerPadding: "250px",
+  variableWidth: true,
+  slidesToShow: 1,
+});
