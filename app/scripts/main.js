@@ -30,7 +30,6 @@ $(".testimonials-two .testimonials-two__slider-wrap").slick({
   arrows: false,
   infinite: true,
   centerMode: true,
-  // centerPadding: "250px",
   variableWidth: true,
   slidesToShow: 1,
 });
