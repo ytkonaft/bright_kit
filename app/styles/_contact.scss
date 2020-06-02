@@ -1,0 +1,123 @@
+.contact-one {
+  padding: 5.96% 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__content-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+  }
+
+  &__information {
+    margin: 31px 0 48px;
+  }
+
+  &__phone,
+  &__link,
+  &__social {
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+
+  &__phone,
+  &__addres,
+  &__link {
+    @extend .title-h5;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 56px;
+      color: $black;
+      margin-right: 8px;
+    }
+  }
+
+  &__addres {
+    margin: 24px 0;
+  }
+
+  &__link {
+    @extend .text-bold;
+    transition: all 0.3s ease;
+  }
+
+  &__social-link {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__social {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    i {
+      font-size: 45px;
+      color: $black;
+      vertical-align: middle;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 0 40px;
+    }
+  }
+  &__img-wrap {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .contact-one {
+    &__content-wrap {
+      justify-content: center;
+    }
+
+    &__img-wrap {
+      padding-top: 50px;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .contact-one {
+    &__title {
+      font-size: 55px;
+    }
+  }
+}
