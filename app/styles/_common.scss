@@ -159,6 +159,13 @@ button {
   border: $border-width-btn solid $black;
 }
 
+.btn-subscribe-action {
+  font: $font-btn-subscribe-action;
+  padding: 0 44px;
+  letter-spacing: -0.85px;
+  border: $border-width-btn solid $black;
+}
+
 .btn {
   background-color: $white;
   color: $black;
