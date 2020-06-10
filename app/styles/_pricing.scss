@@ -91,6 +91,190 @@
   &__card-btn {
     @extend .btn-subscribe;
     padding: 0 25.41%;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+}
+
+/////////////////////////////////////////
+
+.pricing-two {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+    margin-bottom: 34px;
+  }
+
+  &__switch-content {
+    min-width: 330px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  .text-switch {
+    @extend .title-h5;
+    @extend .text-bold;
+  }
+
+  &__monthly {
+    margin-right: 35px;
+  }
+
+  &__yearly {
+    margin-left: 47px;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 6px;
+
+    input {
+      display: none;
+    }
+  }
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    width: 66px;
+    height: 27px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light-gray;
+    transition: 0.4s;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      transition: all 0.4s ease;
+    }
+
+    &:before {
+      height: 40px;
+      width: 40px;
+      left: -4px;
+      bottom: -5px;
+      background-color: $primary;
+    }
+
+    &:after {
+      height: 16px;
+      width: 16px;
+      top: 5px;
+      left: 8px;
+      background-color: $white;
+    }
+
+    &.round {
+      border-radius: 34px;
+
+      &:before,
+      &:after {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  input:checked + &__slider {
+    background-color: $secondary;
+  }
+
+  input:checked + &__slider:after {
+    background-color: $secondary;
+  }
+
+  input:focus + &__slider {
+    box-shadow: 0 0 1px $secondary;
+  }
+
+  input:focus + &__slider:after {
+    box-shadow: 0 0 1px $secondary;
+  }
+
+  input:checked + &__slider:before {
+    transform: translateX(36px);
+  }
+  input:checked + &__slider:after {
+    transform: translateX(36px);
+  }
+
+  /* Rounded sliders */
+  &__card {
+    padding: 54px;
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 964px;
+  }
+
+  &__card-content {
+    max-width: 424px;
+  }
+
+  &__card-title {
+    @extend .title-h4;
+    @extend .text-bold;
+    margin-bottom: 16px;
+  }
+
+  &__card-text {
+    @extend .title-h5;
+  }
+
+  &__card-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card-price {
+    @extend .title-h1;
+    @extend .text-bold;
+    margin-bottom: 24px;
+  }
+
+  &__card-btn {
+    @extend .btn-subscribe;
+    padding: 9px 30px 7px;
+    line-height: 46px;
+  }
+
+  .card-primary {
+    border-color: $primary;
+    background-color: $primary;
+  }
+  .color-white {
+    color: $white;
+    border-color: $white;
   }
 }
 
@@ -125,6 +309,22 @@
       margin-top: 45px;
     }
   }
+
+  .pricing-two {
+    &__title {
+      font-size: 50px;
+    }
+
+    &__card {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__card-content {
+      margin-bottom: 35px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -132,6 +332,20 @@
   .pricing-one {
     &__title {
       font-size: 35px;
+    }
+  }
+
+  .pricing-two {
+    &__title {
+      font-size: 35px;
+    }
+
+    &__switch {
+      justify-content: center;
+    }
+
+    &__yearly {
+      margin-left: 40px;
     }
   }
 }
@@ -180,6 +394,12 @@
     &__card-btn {
       padding: 0 6%;
       line-height: 60px;
+    }
+  }
+
+  .pricing-two {
+    &__title {
+      font-size: 30px;
     }
   }
 }
