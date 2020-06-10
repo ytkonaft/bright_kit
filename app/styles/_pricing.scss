@@ -311,6 +311,11 @@
   }
 
   .pricing-two {
+    &__switch-content {
+      min-width: 0;
+      max-width: 330px;
+    }
+
     &__title {
       font-size: 50px;
     }
