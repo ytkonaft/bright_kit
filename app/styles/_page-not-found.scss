@@ -113,17 +113,15 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .page-not-found-two {
-    &__img-wrap {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: 550px) {
   .page-not-found {
     &__title {
       font-size: 135px;
+    }
+  }
+
+  .page-not-found-two {
+    &__img-wrap {
+      display: none;
     }
   }
 }
