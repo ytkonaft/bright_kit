@@ -64,18 +64,13 @@ $(teamSlider).slick({
   ],
 });
 
-const teamArrowPrev = document.getElementsByClassName("slick-prev");
-const arrowLeft = teamArrowPrev.item(0);
-arrowLeft.innerHTML = "<i></i>";
-
-const colectionArrowLeft = arrowLeft.getElementsByTagName("i");
-const teamArrowLeft = colectionArrowLeft.item(0);
-teamArrowLeft.classList.add("icon-chevron-back");
-
-const teamArrowNext = document.getElementsByClassName("slick-next");
-const arrowRight = teamArrowNext.item(0);
-arrowRight.innerHTML = "<i></i>";
-
-const colectionArrowRight = arrowRight.getElementsByTagName("i");
-const teamArrowRight = colectionArrowRight.item(0);
-teamArrowRight.classList.add("icon-chevron-forward");
+function teamArrow(arrowClass, iconClass) {
+  const arrowCollection = document.getElementsByClassName(arrowClass);
+  const arrow = arrowCollection.item(0);
+  const arrowArray = Array.from(arrowCollection);
+  arrowArray.forEach((itm) => {
+    itm.innerHTML = `<i class='${iconClass}'></i>`;
+  });
+}
+teamArrow("slick-prev", "icon-chevron-back");
+teamArrow("slick-next", "icon-chevron-forward");
