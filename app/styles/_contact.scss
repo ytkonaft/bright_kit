@@ -94,6 +94,205 @@
   }
 }
 
+//////////////////////////////////////
+
+.contact-two {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+    margin-bottom: 54px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__forms {
+    max-width: 504px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 105px;
+  }
+
+  &__name,
+  &__email {
+    padding: 15px 0 12px 70px;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__message,
+  &__name,
+  &__email {
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 3px;
+    @extend .title-h6;
+    @extend .text-medium;
+  }
+
+  &__name {
+    background-image: url(../images/contact-user.svg);
+    background-repeat: no-repeat;
+    background-position: center left 13px;
+    margin-bottom: 16px;
+  }
+
+  &__email {
+    margin-bottom: 16px;
+    background-image: url(../images/contact-email.svg);
+    background-repeat: no-repeat;
+    background-position: center left 13px;
+  }
+
+  &__message {
+    max-height: 210px;
+    padding: 13px 0 0 21px;
+    margin-bottom: 9px;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__btn-send {
+    @extend .btn-lg;
+    @extend .btn-primary;
+    line-height: 46px;
+    padding: 9px 209px;
+    margin-bottom: 23px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $secondary;
+      color: $gray;
+    }
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  .checkbox-label input {
+    display: none;
+  }
+
+  .checkbox-label &__checkbox {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + &__checkbox:before {
+    content: "\e905";
+    font-family: "icomoon";
+    font-size: 24px;
+  }
+
+  &__conditions {
+    @extend .title-body;
+  }
+
+  &__info {
+    max-width: 331px;
+  }
+
+  &__addres-wrap,
+  &__phone-wrap,
+  &__hours-wrap {
+    margin-bottom: 24px;
+    padding-left: 4px;
+  }
+
+  &__addres-title,
+  &__phone-title,
+  &__hours-title {
+    @extend .title-caption;
+    color: $gray;
+    margin-bottom: 4px;
+  }
+
+  &__addres,
+  &__phone,
+  &__hours {
+    @extend .title-h5;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__link {
+    @extend .title-h4;
+    @extend .text-bold;
+    color: $black;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__icon-wrap {
+    max-width: 240px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+  }
+
+  &__behance,
+  &__dribble,
+  &__twitter {
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 73px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 34px;
+      color: $black;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  &__behance,
+  &__dribble,
+  &__twitter,
+  i {
+    transition: all 0.3s ease;
+  }
+}
+
+//////////////////////////////////////
 /*==========  Desktop First Method  ==========*/
 
 /* Medium Devices, Desktops */
@@ -107,10 +306,60 @@
       padding-top: 50px;
     }
   }
+
+  .contact-two {
+    &__title {
+      text-align: center;
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__forms {
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
+
+    &__info {
+      text-align: center;
+    }
+
+    &__icon-wrap {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .contact-two {
+    &__forms {
+      max-width: 100%;
+    }
+
+    &__btn-send {
+      padding: 9px 109px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .contact-two {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .contact-two {
+    &__btn-send {
+      padding: 9px 70px;
+    }
+  }
 }
 
 /* Custom, iPhone Retina */
