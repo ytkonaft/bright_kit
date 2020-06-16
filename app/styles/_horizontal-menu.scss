@@ -1,11 +1,14 @@
 @import "_vars";
 
-.horizontal-menu-one {
+.horizontal-menu-one,
+.horizontal-menu-two {
   width: 100%;
   padding: 24px 0;
   display: inline-block;
   background-color: $light-gray;
+}
 
+.horizontal-menu-one {
   &__wrap {
     height: 100%;
     display: flex;
@@ -62,10 +65,6 @@
 ////////////////////////////
 
 .horizontal-menu-two {
-  width: 100%;
-  padding: 24px 0;
-  display: inline-block;
-  background-color: $light-gray;
   margin-top: 50px;
 
   &__logo {
@@ -78,9 +77,7 @@
     @extend .title-body;
     @extend .text-medium;
     margin-right: 49px;
-
     color: $black;
-
     transition: all 0.3s ease;
     &:hover {
       color: $primary;
@@ -88,16 +85,25 @@
   }
 
   &__menu-links {
-    height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
   }
 
-  &__links {
+  &__links,
+  &__menu-links {
     height: 100%;
     display: flex;
     align-items: center;
+  }
+
+  a.horizontal-menu-two__link {
+    i {
+      color: $primary;
+    }
+  }
+
+  &__link,
+  &__btn {
+    transition: all 0.3s ease;
   }
 
   &__link {
@@ -105,6 +111,10 @@
     @extend .link-sm;
     @extend .link-btn;
     margin-bottom: 0 !important;
+
+    &:hover {
+      color: pink;
+    }
   }
 
   &__button {
@@ -119,12 +129,10 @@
     padding: 5px 16px;
     line-height: 17px !important;
     margin-right: 16px;
-  }
 
-  a {
-    text-decoration: none;
-    i {
-      color: $primary;
+    &:hover {
+      color: $white;
+      background-color: $primary;
     }
   }
 }
