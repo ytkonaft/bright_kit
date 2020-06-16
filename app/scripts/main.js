@@ -30,12 +30,14 @@ $(sliderSlick).slick({
   ],
 });
 
-const teamSlider = ".team-two .team-two__slider-wrap";
-
-$(teamSlider).slick({
+$(".team-two .team-two__slider-wrap").slick({
   dots: false,
   arrows: true,
   infinite: true,
+  prevArrow:
+    "<button class='slick-prev'><i class='icon-chevron-back'></i></button>",
+  nextArrow:
+    "<button class='slick-next'><i class='icon-chevron-forward'></i></button>",
   slidesToShow: 3,
   slidesToScroll: 3,
   responsive: [
@@ -63,14 +65,3 @@ $(teamSlider).slick({
     },
   ],
 });
-
-function teamArrow(arrowClass, iconClass) {
-  const arrowCollection = document.getElementsByClassName(arrowClass);
-  const arrow = arrowCollection.item(0);
-  const arrowArray = Array.from(arrowCollection);
-  arrowArray.forEach((itm) => {
-    itm.innerHTML = `<i class='${iconClass}'></i>`;
-  });
-}
-teamArrow("slick-prev", "icon-chevron-back");
-teamArrow("slick-next", "icon-chevron-forward");
