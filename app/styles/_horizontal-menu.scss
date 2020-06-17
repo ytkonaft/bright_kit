@@ -1,11 +1,14 @@
 @import "_vars";
 
-.horizontal-menu-one {
+.horizontal-menu-one,
+.horizontal-menu-two {
   width: 100%;
   padding: 24px 0;
   display: inline-block;
   background-color: $light-gray;
+}
 
+.horizontal-menu-one {
   &__wrap {
     height: 100%;
     display: flex;
@@ -59,7 +62,81 @@
     }
   }
 }
+////////////////////////////
 
+.horizontal-menu-two {
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-item {
+    @extend .title-body;
+    @extend .text-medium;
+    margin-right: 49px;
+    color: $black;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__menu-links {
+    justify-content: flex-end;
+  }
+
+  &__links,
+  &__menu-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link,
+  &__btn {
+    transition: all 0.3s ease;
+  }
+
+  &__link {
+    width: 60px;
+    @extend .link-sm;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+
+    &:hover {
+      color: pink;
+    }
+  }
+
+  &__button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    @extend .btn-sm;
+    @extend .btn-border-primary;
+    padding: 5px 16px;
+    line-height: 17px !important;
+    margin-right: 16px;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//////////////////////////////////////////////////////////
 @media only screen and (max-width: 1200px) {
   .horizontal-menu-one {
     &__menu-links {
@@ -67,6 +144,12 @@
     }
     .menu-item {
       margin-right: 35px;
+    }
+  }
+
+  .horizontal-menu-two {
+    &__menu-item {
+      margin-right: 30px;
     }
   }
 }
@@ -86,6 +169,12 @@
       }
     }
   }
+
+  .horizontal-menu-two {
+    &__menu-item {
+      display: none;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -95,6 +184,12 @@
       justify-content: center;
     }
     &__menu-icons {
+      justify-content: center;
+    }
+  }
+
+  .horizontal-menu-two {
+    &__logo {
       justify-content: center;
     }
   }
