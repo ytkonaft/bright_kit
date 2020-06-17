@@ -65,8 +65,6 @@
 ////////////////////////////
 
 .horizontal-menu-two {
-  margin-top: 50px;
-
   &__logo {
     height: 100%;
     display: flex;
@@ -95,12 +93,6 @@
     align-items: center;
   }
 
-  a.horizontal-menu-two__link {
-    i {
-      color: $primary;
-    }
-  }
-
   &__link,
   &__btn {
     transition: all 0.3s ease;
@@ -109,7 +101,10 @@
   &__link {
     width: 60px;
     @extend .link-sm;
-    @extend .link-btn;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 0 !important;
 
     &:hover {
@@ -134,6 +129,10 @@
       color: $white;
       background-color: $primary;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
