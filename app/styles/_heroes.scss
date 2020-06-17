@@ -13,10 +13,10 @@
     width: 100%;
     height: 100%;
   }
-  .heroes-title {
+  .title-h1 {
     margin: 22px 0 24px;
   }
-  .heroes-text {
+  .title-h5 {
     max-width: 564px;
   }
 
@@ -50,8 +50,12 @@
     display: inline-block;
     margin-top: 25px;
     color: $black;
-    text-decoration: none;
     width: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
   }
   &__img {
     position: absolute;
@@ -59,16 +63,15 @@
     top: -6%;
     margin-left: 35px;
   }
-  .additional-title {
-    @extend .title-h4;
+  .title-h4 {
     @extend .text-medium;
   }
-  .heroes-title {
-    @extend .title-h1;
+  .title-h1 {
     @extend .text-bold;
   }
-  .heroes-text {
-    @extend .title-h5;
+
+  a {
+    text-decoration: none;
   }
 }
 
@@ -108,8 +111,9 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    padding: 126px 207px 0 201px;
-    // padding-top: 126px;
+    padding-top: 126px;
+    max-width: 1250px;
+
     img {
       display: inline-block;
       width: 100%;
@@ -118,6 +122,24 @@
 }
 
 ////////////Media
+@media only screen and (max-width: 1340px) {
+  .heroes-one {
+    .title-h1 {
+      font-size: 75px;
+    }
+
+    img {
+      left: 85%;
+    }
+  }
+
+  .heroes-two {
+    &__img-wrap {
+      max-width: 1000px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .heroes-one {
     padding-top: 50px;
@@ -126,6 +148,7 @@
       flex-direction: column;
       justify-content: center;
     }
+
     &__img {
       position: static;
       width: 40%;
@@ -161,15 +184,27 @@
   }
 }
 
+@media only screen and (max-width: 780px) {
+  .heroes-one {
+    .title-h1 {
+      font-size: 60px;
+    }
+  }
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .heroes-one {
     &__btn-black {
-      margin: 0 10px 0 0;
+      margin: 0 10px 10px 0;
       padding: 5px 34px;
     }
     &__btn-primary {
       padding: 3px 13px;
+    }
+
+    .title-h1 {
+      font-size: 40px;
     }
   }
 }
@@ -177,8 +212,12 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   .heroes-one {
+    .title-h1 {
+      font-size: 35px;
+    }
+
     &__btn-black {
-      margin: 0 15px 0 0;
+      margin: 0 10px 15px 0;
       padding: 5px 30px;
     }
     &__btn-primary {
