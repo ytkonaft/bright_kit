@@ -70,7 +70,6 @@ p {
   font: $font-vertical-menu;
   letter-spacing: -0.33px;
   color: $black;
-  @extend .text-bold;
 }
 .title-body {
   font: $font-body;
