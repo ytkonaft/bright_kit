@@ -50,13 +50,22 @@
     @extend .title-caption;
     margin: 4px 0;
   }
-  .link-sm {
-    justify-content: start;
+
+  &__link {
+    @extend .link-sm;
+    width: 60px;
     margin: 0;
-    i {
-      color: $primary;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: pink;
     }
   }
+
   .slick-dots {
     margin: 0;
     padding: 47px 0 0;
@@ -89,6 +98,10 @@
       cursor: pointer;
       background-color: $white;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
@@ -137,10 +150,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  .color-white {
-    color: $white;
   }
 
   &__card-title {
