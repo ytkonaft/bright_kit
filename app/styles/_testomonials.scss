@@ -1,6 +1,6 @@
 @import "_vars";
 
-.testimonials-one {
+.testomonials-one {
   padding: 7.5% 0;
   min-height: 100vh;
   width: 100%;
@@ -39,8 +39,7 @@
     justify-content: center;
     margin-bottom: 48px;
   }
-  &__title {
-    @extend .title-h3;
+  .title-h3 {
     @extend .text-bold;
   }
 
@@ -86,8 +85,7 @@
       background-color: $white;
     }
   }
-  .card-title {
-    @extend .title-h6;
+  .title-h6 {
     @extend .text-medium;
   }
   .card-caption {
@@ -100,7 +98,7 @@
 
 //////////////////////////////////////////////
 
-.testimonials-two {
+.testomonials-two {
   padding: 100px 0;
   min-height: 100vh;
   width: 100%;
@@ -114,22 +112,23 @@
     margin-bottom: 64px;
   }
 
-  &__title {
-    @extend .title-h2;
+  .title-h2 {
     @extend .text-bold;
   }
 
-  .card-title {
-    @extend .title-h4;
+  .title-h4 {
     @extend .text-medium;
   }
+
   .card-caption {
     @extend .title-h6;
   }
+
   .card-text {
     @extend .title-h6;
     margin-top: 18px;
   }
+
   &__content {
     width: 100%;
     position: relative;
@@ -204,7 +203,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .testimonials-one {
+  .testomonials-one {
     .card-right {
       margin-right: 0;
     }
@@ -219,7 +218,7 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .testimonials-one {
+  .testomonials-one {
     .slick-dots {
       li {
         display: inline-block;
@@ -239,7 +238,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .testimonials-one {
+  .testomonials-one {
     .card-right {
       margin-right: 0px;
       margin-left: 10px;
@@ -256,16 +255,24 @@
     }
   }
 
-  .testimonials-two {
-    &__title {
+  .testomonials-two {
+    .title-h2 {
       font-size: 40px;
+    }
+
+    &__content {
+      max-width: 600px;
+    }
+
+    &__card {
+      padding: 103px 100px 88px;
     }
   }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .testimonials-one {
+  .testomonials-one {
     &__title-wrap {
       margin-bottom: 30px;
     }
@@ -273,20 +280,25 @@
       font-size: 26px;
     }
   }
-  .testimonials-two {
-    &__title {
-      font-size: 27px;
+  .testomonials-two {
+    .title-h2 {
+      font-size: 25px;
+    }
+
+    &__content {
+      max-width: 450px;
     }
 
     &__card {
-      padding: 103px 225px 88px;
+      max-width: 100%;
+      padding: 103px 70px 88px;
     }
   }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .testimonials-one {
+  .testomonials-one {
     .card-right {
       margin-left: 10px;
     }
@@ -312,9 +324,17 @@
     }
   }
 
-  .testimonials-two {
-    &__title {
-      font-size: 25px;
+  .testomonials-two {
+    .title-h2 {
+      font-size: 22px;
+    }
+
+    &__content {
+      max-width: 400px;
+    }
+
+    &__card {
+      padding: 103px 30px 88px;
     }
   }
 }
