@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "slick-carousel";
 
-$(".testomonials-one .testomonials-one__slider-wrap").slick({
+$(".testimonials-one .testimonials-one__slider-wrap").slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -25,7 +25,7 @@ $(".testomonials-one .testomonials-one__slider-wrap").slick({
   ],
 });
 
-$(".testomonials-two .testomonials-two__slider-wrap").slick({
+$(".testimonials-two .testimonials-two__slider-wrap").slick({
   dots: true,
   arrows: false,
   infinite: true,
