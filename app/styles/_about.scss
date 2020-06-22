@@ -100,12 +100,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
 
   &__img-wrap {
     width: 100%;
     height: 298px;
-
     background-image: url(../images/image-about-two.png);
     background-repeat: no-repeat;
     background-position: top center;
@@ -191,7 +189,7 @@
     align-items: center;
     justify-content: center;
     color: $black;
-    transition: all 0.3s ease;
+    margin-bottom: 8px;
 
     i {
       font-size: 62px;
@@ -212,13 +210,21 @@
   }
 
   &__badge-text {
-    margin-top: 8px;
     @extend .title-h5;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__content,
   &__badges {
     margin-top: 125px;
+  }
+
+  &__badge-text,
+  &__icon-wrap {
+    transition: all 0.3s ease;
   }
 }
 
@@ -271,7 +277,7 @@
     &__content {
       text-align: center;
       max-width: 100%;
-      margin-top: 220px;
+      margin-top: 50px;
     }
 
     a.link-story {
@@ -281,6 +287,10 @@
     &__badges {
       margin-top: 40px;
       justify-content: center;
+    }
+
+    &__links {
+      max-width: 100%;
     }
   }
 }
