@@ -1,12 +1,7 @@
 import $ from "jquery";
 import "slick-carousel";
 
-const sliderSlick = [
-  ".testimonials-one .testimonials-one__slider-wrap",
-  ".features-one .features-one__slider-wrap",
-].join();
-
-$(sliderSlick).slick({
+$(".testimonials-one .testimonials-one__slider-wrap").slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -28,6 +23,15 @@ $(sliderSlick).slick({
       },
     },
   ],
+});
+
+$(".testimonials-two .testimonials-two__slider-wrap").slick({
+  dots: true,
+  arrows: false,
+  infinite: true,
+  centerMode: true,
+  variableWidth: true,
+  slidesToShow: 1,
 });
 
 $(".team-two .team-two__slider-wrap").slick({
