@@ -285,3 +285,85 @@ a.link-btn {
   width: $width-avatar-lg;
   height: $height-avatar-lg;
 }
+
+//////////switch
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 6px;
+  margin-bottom: 0;
+
+  input {
+    display: none;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  width: 66px;
+  height: 27px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $light-gray;
+  transition: 0.4s;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    transition: all 0.4s ease;
+  }
+
+  &:before {
+    height: 40px;
+    width: 40px;
+    left: -4px;
+    bottom: -5px;
+    background-color: $primary;
+  }
+
+  &:after {
+    height: 16px;
+    width: 16px;
+    top: 5px;
+    left: 8px;
+    background-color: $white;
+  }
+
+  &.round {
+    border-radius: 34px;
+
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: $secondary;
+}
+
+input:checked + .slider:after {
+  background-color: $secondary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $secondary;
+}
+
+input:focus + .slider:after {
+  box-shadow: 0 0 1px $secondary;
+}
+
+input:checked + .slider:before {
+  transform: translateX(36px);
+}
+input:checked + .slider:after {
+  transform: translateX(36px);
+}

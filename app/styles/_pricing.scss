@@ -28,6 +28,11 @@
   &__btn-yearly {
     @extend .btn-primary;
     margin-left: 15px;
+
+    &:hover {
+      background-color: pink;
+      color: $black;
+    }
   }
 
   &__btn-monthly {
@@ -35,6 +40,16 @@
     padding: 0 25px;
     line-height: 44px;
     margin-left: 5px;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &__btn-monthly,
+  &__btn-yearly {
+    transition: all 0.3s ease;
   }
 
   &__card {
@@ -60,6 +75,12 @@
   .color-white {
     color: $white;
     border-color: $white;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border-color: $black;
+    }
   }
 
   &__card-content {
@@ -128,100 +149,12 @@
     margin-bottom: 39px;
   }
 
-  .text-switch {
-    @extend .title-h5;
-    @extend .text-bold;
-  }
-
   &__monthly {
     margin-right: 35px;
   }
 
   &__yearly {
     margin-left: 47px;
-  }
-
-  label {
-    margin-bottom: 0;
-  }
-
-  &__switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-top: 6px;
-
-    input {
-      display: none;
-    }
-  }
-  &__slider {
-    position: absolute;
-    cursor: pointer;
-    width: 66px;
-    height: 27px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $light-gray;
-    transition: 0.4s;
-
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-      transition: all 0.4s ease;
-    }
-
-    &:before {
-      height: 40px;
-      width: 40px;
-      left: -4px;
-      bottom: -5px;
-      background-color: $primary;
-    }
-
-    &:after {
-      height: 16px;
-      width: 16px;
-      top: 5px;
-      left: 8px;
-      background-color: $white;
-    }
-
-    &.round {
-      border-radius: 34px;
-
-      &:before,
-      &:after {
-        border-radius: 50%;
-      }
-    }
-  }
-
-  input:checked + &__slider {
-    background-color: $secondary;
-  }
-
-  input:checked + &__slider:after {
-    background-color: $secondary;
-  }
-
-  input:focus + &__slider {
-    box-shadow: 0 0 1px $secondary;
-  }
-
-  input:focus + &__slider:after {
-    box-shadow: 0 0 1px $secondary;
-  }
-
-  input:checked + &__slider:before {
-    transform: translateX(36px);
-  }
-  input:checked + &__slider:after {
-    transform: translateX(36px);
   }
 
   /* Rounded sliders */
@@ -233,7 +166,12 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    margin-bottom: 35px;
     max-width: 964px;
+  }
+
+  .margin-card {
+    margin-bottom: 50px;
   }
 
   &__card-content {
@@ -266,6 +204,24 @@
     @extend .btn-subscribe;
     padding: 9px 30px 7px;
     line-height: 46px;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .hover-white {
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border-color: $black;
+    }
+  }
+
+  &__card-btn,
+  .hover-white {
+    transition: all 0.3s ease;
   }
 
   .card-primary {
