@@ -67,12 +67,13 @@
   &__title {
     @extend .title-h1;
     @extend .text-bold;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
+    line-height: 60px;
   }
 
   &__text {
     @extend .title-h5;
-    margin-bottom: 32px;
+    margin-bottom: 60px;
   }
 
   &__btn {
