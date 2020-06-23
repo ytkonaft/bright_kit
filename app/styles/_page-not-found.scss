@@ -13,19 +13,17 @@
     height: 100%;
   }
 
-  &__title {
-    @extend .title-404;
-    @extend .text-bold;
-  }
-
-  &__text {
-    @extend .title-h5;
+  .title-h5 {
     margin: 32px 0 52px;
   }
 
-  &__btn {
-    @extend .btn-404;
-    @extend .btn-primary;
+  .btn-404 {
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: pink;
+      color: $black;
+    }
   }
 
   &__img-wrap {
@@ -55,20 +53,20 @@
     margin-bottom: 52px;
   }
 
-  &__title {
-    @extend .title-h2;
-    @extend .text-bold;
+  .title-h2 {
     margin-bottom: 16px;
   }
 
-  &__text {
-    @extend .title-h4;
+  .title-h4 {
     margin-bottom: 90px;
   }
 
-  &__btn-home {
-    @extend .btn-xl;
-    @extend .btn-primary;
+  .btn-xl {
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
 }
 
@@ -77,8 +75,8 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .page-not-found {
-    &__title,
-    &__text {
+    .title-404,
+    .title-h5 {
       text-align: center;
     }
 
@@ -93,7 +91,7 @@
   }
 
   .page-not-found-two {
-    &__title {
+    .title-h2 {
       font-size: 50px;
     }
   }
@@ -106,7 +104,7 @@
       text-align: center;
     }
 
-    &__text {
+    .title-h4 {
       font-size: 25px;
     }
   }
@@ -114,7 +112,7 @@
 
 @media only screen and (max-width: 550px) {
   .page-not-found {
-    &__title {
+    .title-404 {
       font-size: 135px;
     }
   }
@@ -129,7 +127,7 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   .page-not-found {
-    &__title {
+    .title-404 {
       font-size: 130px;
     }
 
