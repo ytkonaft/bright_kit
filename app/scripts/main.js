@@ -1,7 +1,12 @@
 import $ from "jquery";
 import "slick-carousel";
 
-$(".testimonials-one .testimonials-one__slider-wrap").slick({
+const sliderSlick = [
+  ".testomonials-one .testomonials-one__slider-wrap",
+  ".features-one .features-one__slider-wrap",
+].join();
+
+$(sliderSlick).slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -25,7 +30,7 @@ $(".testimonials-one .testimonials-one__slider-wrap").slick({
   ],
 });
 
-$(".testimonials-two .testimonials-two__slider-wrap").slick({
+$(".testomonials-two .testomonials-two__slider-wrap").slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -68,4 +73,12 @@ $(".team-two .team-two__slider-wrap").slick({
       },
     },
   ],
+});
+
+const navigationButton = document.getElementById("navigation-toggle-btn");
+const navigationMenu = document.getElementById("navigation-menu");
+
+navigationButton.addEventListener("click", function () {
+  navigationButton.classList.toggle("active");
+  navigationMenu.classList.toggle("active");
 });

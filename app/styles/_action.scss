@@ -28,6 +28,12 @@
     @extend .btn-border-primary;
     padding: 0 43px;
     line-height: 76px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
 
   &__content-wrap {

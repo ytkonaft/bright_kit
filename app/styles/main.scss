@@ -9,7 +9,7 @@
 @import "_vertical-menu";
 @import "_action";
 @import "_heroes";
-@import "_testimonials";
+@import "_testomonials";
 @import "_features";
 @import "_about";
 @import "_page-not-found";
@@ -17,3 +17,35 @@
 @import "_pricing";
 @import "_team";
 @import "_footer";
+
+.heroes-one,
+.testomonials-one,
+.features-one,
+.action-one,
+.pricing-one,
+.contact-one,
+.team-one {
+  height: 100%;
+  min-height: 100%;
+}
+
+#navigation-toggle-btn {
+  z-index: 10000;
+}
+
+.vertical-menu-one {
+  position: fixed;
+  background-color: $gray;
+  top: 0;
+  right: -100%;
+  transition: all 0.6s ease;
+  z-index: 10000;
+
+  &__content {
+    padding: 25.86% 16%;
+  }
+
+  &.active {
+    right: 0;
+  }
+}
