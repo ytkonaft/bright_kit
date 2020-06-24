@@ -291,7 +291,45 @@ a.link-btn {
   width: $width-avatar-lg;
   height: $height-avatar-lg;
 }
+/////////////checkbox
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
 
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox-label {
+  margin-bottom: 0;
+}
+
+.checkbox-label input {
+  display: none;
+}
+
+.checkbox-label .checkbox {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #3d3d3d;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox:before {
+  content: "\e905";
+  font-family: "icomoon";
+  font-size: 24px;
+}
+
+.conditions {
+  @extend .title-body;
+}
 //////////switch
 
 .switch {
@@ -370,6 +408,7 @@ input:focus + .slider:after {
 input:checked + .slider:before {
   transform: translateX(36px);
 }
+
 input:checked + .slider:after {
   transform: translateX(36px);
 }
