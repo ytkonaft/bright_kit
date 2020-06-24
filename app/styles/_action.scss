@@ -81,11 +81,7 @@
     margin-bottom: 23px;
   }
 
-  &__discount {
-    @extend .title-body;
-  }
-
-  .color-primary {
+  .primary-text {
     color: $primary;
   }
 
