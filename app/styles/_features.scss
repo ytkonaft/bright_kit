@@ -1,9 +1,12 @@
+@import "_vars";
+
 .features-one {
   padding: 6.3% 0;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   &__title-wrap {
     display: flex;
@@ -47,13 +50,22 @@
     @extend .title-caption;
     margin: 4px 0;
   }
-  .link-sm {
-    justify-content: start;
+
+  &__link {
+    @extend .link-sm;
+    width: 60px;
     margin: 0;
-    i {
-      color: $primary;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: pink;
     }
   }
+
   .slick-dots {
     margin: 0;
     padding: 47px 0 0;
@@ -87,6 +99,69 @@
       background-color: $white;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//////////////////////////////////////////////
+
+.features-two {
+  padding: 120px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__wrap {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 573px;
+    margin: 0 auto;
+    @extend .title-h6;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__cards {
+    margin-right: 50px;
+  }
+
+  &__card {
+    max-width: 380px;
+    padding: 32px 48px;
+    background-color: $light-gray;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-title {
+    @extend .title-h5;
+    @extend .text-bold;
+    margin-bottom: 3px;
+  }
+
+  &__card-text {
+    @extend .title-caption;
+    min-width: 284px;
+  }
 }
 
 /*==========  Desktop First Method  ==========*/
@@ -105,6 +180,26 @@
       margin-right: 5px;
     }
   }
+
+  .features-two {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__cards {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__imag-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+  }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -121,6 +216,13 @@
           margin: 0 10px;
         }
       }
+    }
+  }
+
+  .features-two {
+    &__card {
+      margin-right: 0;
+      margin-bottom: 24px;
     }
   }
 }
@@ -157,6 +259,12 @@
       margin: 0 auto;
     }
   }
+
+  .features-two {
+    &__imag-wrap {
+      display: none;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -174,6 +282,21 @@
     }
     &__title {
       font-size: 30px;
+    }
+  }
+
+  .features-two {
+    &__content {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    &__card {
+      max-width: 100%;
+    }
+
+    &__card-text {
+      min-width: 100%;
     }
   }
 }

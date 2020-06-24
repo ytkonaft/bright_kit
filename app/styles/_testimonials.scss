@@ -39,8 +39,7 @@
     justify-content: center;
     margin-bottom: 48px;
   }
-  &__title {
-    @extend .title-h3;
+  .title-h3 {
     @extend .text-bold;
   }
 
@@ -86,17 +85,118 @@
       background-color: $white;
     }
   }
+  .title-h6 {
+    @extend .text-medium;
+  }
+  .card-caption {
+    @extend .title-caption;
+  }
+  .card-text {
+    @extend .title-caption;
+  }
 }
 
-.card-title {
-  @extend .title-h6;
-  @extend .text-medium;
-}
-.card-caption {
-  @extend .title-caption;
-}
-.card-text {
-  @extend .title-caption;
+//////////////////////////////////////////////
+
+.testimonials-two {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &__title-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+
+  .title-h2 {
+    @extend .text-bold;
+  }
+
+  .title-h4 {
+    @extend .text-medium;
+  }
+
+  .card-caption {
+    @extend .title-h6;
+  }
+
+  .card-text {
+    @extend .title-h6;
+    margin-top: 18px;
+  }
+
+  &__content {
+    width: 100%;
+    position: relative;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card-content {
+    margin-top: 8px;
+  }
+
+  &__card {
+    max-width: 730px;
+    background-color: $light-gray;
+    text-align: center;
+    border-radius: 12px;
+    padding: 103px 140px 88px;
+    margin: 0px 15px;
+  }
+
+  &__avatar {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__slider-wrap {
+    min-width: 100%;
+  }
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-dots {
+    margin: 48px 0 0;
+    padding: 0;
+    text-align: center;
+    font: normal;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      &:nth-child(2) {
+        margin: 0 14px 0 16px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $primary;
+          border: none;
+        }
+      }
+    }
+    button {
+      font-size: 0;
+      border-radius: 50%;
+      border: 2px solid $black;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      padding: 0;
+      cursor: pointer;
+      background-color: $white;
+    }
+  }
 }
 
 /*==========  Desktop First Method  ==========*/
@@ -154,6 +254,28 @@
       font-size: 13px;
     }
   }
+
+  .testimonials-two {
+    .title-h2 {
+      font-size: 40px;
+    }
+
+    &__content {
+      max-width: 600px;
+    }
+
+    &__card {
+      padding: 103px 100px 88px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials-two {
+    &__content {
+      max-width: 500px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -162,8 +284,38 @@
     &__title-wrap {
       margin-bottom: 30px;
     }
-    &__title {
+    .title-h3 {
       font-size: 26px;
+    }
+
+    .card-right {
+      margin-left: 0;
+    }
+  }
+  .testimonials-two {
+    .title-h2 {
+      font-size: 25px;
+    }
+
+    &__content {
+      max-width: 400px;
+    }
+
+    &__card {
+      max-width: 100%;
+      padding: 103px 30px 88px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .testimonials-two {
+    &__content {
+      max-width: 350px;
+    }
+
+    &__card {
+      padding: 103px 20px 88px;
     }
   }
 }
@@ -193,6 +345,20 @@
           margin-right: 0;
         }
       }
+    }
+  }
+
+  .testimonials-two {
+    .title-h2 {
+      font-size: 22px;
+    }
+
+    &__content {
+      max-width: 300px;
+    }
+
+    &__card {
+      padding: 103px 10px 88px;
     }
   }
 }

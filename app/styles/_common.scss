@@ -60,11 +60,16 @@ p {
   color: $black;
 }
 
+.title-404 {
+  font: $font-404;
+  letter-spacing: -3.56px;
+  color: $black;
+}
+
 .title-vertical-menu {
   font: $font-vertical-menu;
   letter-spacing: -0.33px;
   color: $black;
-  @extend .text-bold;
 }
 .title-body {
   font: $font-body;
@@ -144,6 +149,12 @@ button {
   letter-spacing: -0.85px;
 }
 
+.btn-404 {
+  padding: 9px 35px;
+  font: $font-btn-404;
+  letter-spacing: -0.68px;
+}
+
 .menu-btn {
   font: $font-btn-vertical-menu;
   padding: 0 16px;
@@ -157,6 +168,13 @@ button {
   font: $font-btn-subscribe;
   padding: 0 112px;
   letter-spacing: -0.68px;
+  border: $border-width-btn solid $black;
+}
+
+.btn-subscribe-action {
+  font: $font-btn-subscribe-action;
+  padding: 0 44px;
+  letter-spacing: -0.85px;
   border: $border-width-btn solid $black;
 }
 
@@ -272,4 +290,125 @@ a.link-btn {
 .avatar-lg {
   width: $width-avatar-lg;
   height: $height-avatar-lg;
+}
+/////////////checkbox
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox-label {
+  margin-bottom: 0;
+}
+
+.checkbox-label input {
+  display: none;
+}
+
+.checkbox-label .checkbox {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #3d3d3d;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox:before {
+  content: "\e905";
+  font-family: "icomoon";
+  font-size: 24px;
+}
+
+.conditions {
+  @extend .title-body;
+}
+//////////switch
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 6px;
+  margin-bottom: 0;
+
+  input {
+    display: none;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  width: 66px;
+  height: 27px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $light-gray;
+  transition: 0.4s;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    transition: all 0.4s ease;
+  }
+
+  &:before {
+    height: 40px;
+    width: 40px;
+    left: -4px;
+    bottom: -5px;
+    background-color: $primary;
+  }
+
+  &:after {
+    height: 16px;
+    width: 16px;
+    top: 5px;
+    left: 8px;
+    background-color: $white;
+  }
+
+  &.round {
+    border-radius: 34px;
+
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: $secondary;
+}
+
+input:checked + .slider:after {
+  background-color: $secondary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $secondary;
+}
+
+input:focus + .slider:after {
+  box-shadow: 0 0 1px $secondary;
+}
+
+input:checked + .slider:before {
+  transform: translateX(36px);
+}
+
+input:checked + .slider:after {
+  transform: translateX(36px);
 }

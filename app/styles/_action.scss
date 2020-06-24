@@ -50,6 +50,52 @@
   }
 }
 
+///////////////////////////////////////////////
+
+.action-two {
+  padding: 100px 0 100px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__content {
+    max-width: 475px;
+  }
+
+  &__title {
+    @extend .title-h1;
+    @extend .text-bold;
+    margin-bottom: 25px;
+    line-height: 60px;
+  }
+
+  &__text {
+    @extend .title-h5;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    @extend .btn-subscribe-action;
+    margin-bottom: 23px;
+  }
+
+  .primary-text {
+    color: $primary;
+  }
+
+  &__img-wrap {
+    width: 705px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-image: url(../images/image-action-two.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -57,6 +103,15 @@
   .action-one {
     &__action-title {
       font-size: 70px;
+    }
+  }
+
+  .action-two {
+    &__img-wrap {
+      width: 100%;
+      left: 0;
+      opacity: 0.2;
+      background-position: center;
     }
   }
 }
@@ -98,6 +153,12 @@
       font-size: 19px;
     }
   }
+
+  .action-two {
+    &__title {
+      font-size: 45px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -112,6 +173,12 @@
     &__action-text {
       font-size: 18px;
       margin: 22px 0;
+    }
+  }
+
+  .action-two {
+    &__title {
+      font-size: 55px;
     }
   }
 }

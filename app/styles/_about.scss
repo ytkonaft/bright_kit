@@ -1,0 +1,318 @@
+.about-one {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__wrap-content {
+    width: 100%;
+
+    display: flex;
+  }
+
+  &__title {
+    @extend .title-h2;
+    @extend .text-bold;
+  }
+
+  &__text {
+    @extend .title-h5;
+    max-width: 455px;
+    margin: 31px 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    @extend .link-sm;
+    display: flex;
+    align-items: center;
+    color: $primary;
+    margin-right: 32px;
+    transition: all 0.3s ease;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: pink;
+    }
+  }
+  a {
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
+  &__badge {
+    padding: 8px 16px 8px 8px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white;
+    position: absolute;
+    right: 68px;
+    bottom: 48px;
+  }
+
+  &__badge-title {
+    @extend .title-body;
+  }
+
+  &__badge-text {
+    @extend .title-small;
+  }
+
+  &__icon-wrap {
+    width: 72px;
+    height: 72px;
+    margin-right: 8px;
+    i {
+      font-size: 72px;
+      color: $primary;
+    }
+  }
+  &__img-wrap {
+    width: 735px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/image-about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+////////////////////////////////////////////////////
+
+.about-two {
+  padding: 100px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img-wrap {
+    width: 100%;
+    height: 298px;
+    background-image: url(../images/image-about-two.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &__content {
+    max-width: 571px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  &__title {
+    @extend .title-h3;
+    @extend .text-medium;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @extend .title-h5;
+    margin-bottom: 16px;
+  }
+
+  .link-story {
+    @extend .link-md;
+    line-height: 48px;
+    display: flex;
+    margin-bottom: 24px;
+    color: $primary;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 23px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: pink;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__links {
+    max-width: 184px;
+    height: 41px;
+
+    i {
+      font-size: 40px;
+    }
+  }
+
+  &__social-net {
+    color: $black;
+    margin-right: 27px;
+    transition: all 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__badges {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    text-align: center;
+    justify-content: flex-end;
+  }
+
+  &__icon-wrap {
+    width: 88px;
+    height: 88px;
+    border: 2px solid #3d3d3d;
+    box-sizing: border-box;
+    border-radius: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    margin-bottom: 8px;
+
+    i {
+      font-size: 62px;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &__badge {
+    margin-right: 56px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__badge-text {
+    @extend .title-h5;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__content,
+  &__badges {
+    margin-top: 125px;
+  }
+
+  &__badge-text,
+  &__icon-wrap {
+    transition: all 0.3s ease;
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .about-one {
+    flex-direction: column;
+    align-items: center;
+    &__img-wrap {
+      width: 100%;
+      height: 290px;
+      margin-top: 40px;
+      position: relative;
+      background-image: none;
+      background-color: $primary;
+    }
+    &__badge {
+      width: 215px;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  .about-two {
+    &__content,
+    &__badges {
+      margin-top: 140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .about-two {
+    &__content {
+      text-align: center;
+      max-width: 100%;
+      margin-top: 50px;
+    }
+
+    a.link-story {
+      justify-content: center;
+    }
+
+    &__badges {
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    &__links {
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-two {
+    &__title {
+      font-size: 35px;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .about-one {
+    &__links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link {
+      margin-right: 0;
+    }
+  }
+}
