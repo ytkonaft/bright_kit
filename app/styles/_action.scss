@@ -2,7 +2,8 @@
 
 .action-one {
   padding: 100px 0 100px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -138,6 +139,9 @@
   .action-one {
     &__content-wrap {
       display: inline-block;
+    }
+    &__content {
+      text-align: center;
     }
     &__img-wrap {
       display: none;

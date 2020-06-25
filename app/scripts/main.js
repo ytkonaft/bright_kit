@@ -79,25 +79,38 @@ const navigationButton = document.getElementById("navigation-toggle-btn");
 
 const navigationMenu = document.getElementById("navigation-menu");
 
-const fileNotFound = document.getElementById("file-err");
-
 const navigationButtonOff = document.getElementById("btn-nav-off");
 
-const bodyWrap = document.getElementById("body-wrap");
+const bodyWrap = document.getElementById("content-wrap");
 
-if (!fileNotFound) {
-  navigationButton.addEventListener("click", () => {
-    navigationButton.classList.add("active");
-    navigationMenu.classList.add("active");
-    bodyWrap.classList.add("active");
+const body = document.getElementById("is-home");
+
+function toogleClassBtn(btnEvent) {
+  return btnEvent.addEventListener("click", () => {
+    navigationButton.classList.toggle("active");
+    navigationMenu.classList.toggle("active");
+    bodyWrap.classList.toggle("active");
+    body.classList.toggle("overflow-hidden");
   });
-  navigationButtonOff.addEventListener("click", () => {
-    navigationButton.classList.remove("active");
-    navigationMenu.classList.remove("active");
-    bodyWrap.classList.remove("active");
-  });
+}
+
+if (navigationButton) {
+  toogleClassBtn(navigationButton);
+}
+
+if (navigationButtonOff) {
+  toogleClassBtn(navigationButtonOff);
+}
+
+if (bodyWrap) {
   bodyWrap.addEventListener("click", () => {
     navigationMenu.classList.remove("active");
     bodyWrap.classList.remove("active");
+    body.classList.remove("overflow-hidden");
   });
 }
+
+window.addEventListener("scroll", () => {
+  const horizontalMenu = document.getElementById("main-menu");
+  horizontalMenu.classList.add("active");
+});

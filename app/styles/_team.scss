@@ -1,6 +1,7 @@
 .team-one {
   padding: 100px 0;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,12 +66,15 @@
       }
       i {
         font-size: 40px;
-        margin: 0 12px 0 0;
-        &:last-child {
-          margin: 0;
-          margin-right: 10px;
-        }
       }
+    }
+  }
+
+  &__social-link {
+    margin: 0 12px 0 0;
+    &:last-child {
+      margin: 0;
+      margin-right: 10px;
     }
   }
 
