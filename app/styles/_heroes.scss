@@ -39,11 +39,6 @@
     @extend .btn-xl;
     @extend .btn-border-primary;
     padding: 3px 28px;
-    transition: all 0.3s ease;
-    &:hover {
-      background-color: $primary;
-      color: $white;
-    }
   }
   &__link-content {
     @extend .menu-item;

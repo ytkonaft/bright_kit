@@ -38,7 +38,6 @@
     align-items: center;
     i {
       font-size: 56px;
-      color: $black;
       margin-right: 8px;
     }
   }
@@ -49,6 +48,7 @@
 
   &__link {
     @extend .text-bold;
+    color: $black;
     transition: all 0.3s ease;
   }
 
@@ -68,19 +68,16 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    color: $black;
 
     &:hover {
       background-color: $primary;
+      color: $white;
     }
 
     i {
       font-size: 45px;
-      color: $black;
       vertical-align: middle;
-
-      &:hover {
-        color: $white;
-      }
     }
 
     &:nth-child(2) {
@@ -238,14 +235,11 @@
     i {
       font-size: 34px;
       color: $black;
-
-      &:hover {
-        color: $white;
-      }
     }
 
     &:hover {
       background-color: $primary;
+      color: $white;
     }
   }
   &__behance,

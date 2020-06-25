@@ -76,9 +76,28 @@ $(".team-two .team-two__slider-wrap").slick({
 });
 
 const navigationButton = document.getElementById("navigation-toggle-btn");
+
 const navigationMenu = document.getElementById("navigation-menu");
 
-navigationButton.addEventListener("click", function () {
-  navigationButton.classList.toggle("active");
-  navigationMenu.classList.toggle("active");
-});
+const fileNotFound = document.getElementById("file-err");
+
+const navigationButtonOff = document.getElementById("btn-nav-off");
+
+const bodyWrap = document.getElementById("body-wrap");
+
+if (!fileNotFound) {
+  navigationButton.addEventListener("click", () => {
+    navigationButton.classList.add("active");
+    navigationMenu.classList.add("active");
+    bodyWrap.classList.add("active");
+  });
+  navigationButtonOff.addEventListener("click", () => {
+    navigationButton.classList.remove("active");
+    navigationMenu.classList.remove("active");
+    bodyWrap.classList.remove("active");
+  });
+  bodyWrap.addEventListener("click", () => {
+    navigationMenu.classList.remove("active");
+    bodyWrap.classList.remove("active");
+  });
+}

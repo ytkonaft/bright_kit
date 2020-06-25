@@ -169,6 +169,12 @@ button {
   padding: 0 112px;
   letter-spacing: -0.68px;
   border: $border-width-btn solid $black;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
 }
 
 .btn-subscribe-action {
@@ -212,6 +218,11 @@ button {
   border: $border-width-btn solid $primary;
   box-sizing: border-box;
   color: $primary;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 .btn-border-secondary {
