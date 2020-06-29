@@ -71,7 +71,7 @@
     color: $white;
     border-color: $white;
   }
-  .btn-hover {
+  .btn-white {
     &:hover {
       color: $black;
       background-color: $white;
@@ -251,6 +251,12 @@
     .card-primary {
       margin: 0 auto;
     }
+
+    &__card {
+      &.card-white {
+        margin-bottom: 35px;
+      }
+    }
   }
 
   .pricing-two {
@@ -271,14 +277,6 @@
 
     &__card-content {
       margin-bottom: 35px;
-    }
-  }
-}
-
-@media only screen and (max-height: 921px) {
-  .pricing-one {
-    .card-primary {
-      margin-top: 50px;
     }
   }
 }

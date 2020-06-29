@@ -122,6 +122,9 @@
     .additional-title {
       font-size: 28px;
     }
+    &__content-wrap {
+      text-align: center;
+    }
     &__action-title {
       font-size: 50px;
     }
@@ -129,7 +132,7 @@
       font-size: 21px;
     }
     &__img-wrap {
-      align-items: center;
+      display: none;
     }
   }
 }

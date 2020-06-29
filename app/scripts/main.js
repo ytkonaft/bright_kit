@@ -85,6 +85,8 @@ const bodyWrap = document.getElementById("content-wrap");
 
 const body = document.getElementById("is-home");
 
+const linkScroll = document.getElementById("anchor");
+
 function toogleClassBtn(btnEvent) {
   return btnEvent.addEventListener("click", () => {
     navigationButton.classList.toggle("active");
@@ -110,7 +112,29 @@ if (bodyWrap) {
   });
 }
 
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute("href");
+    document.querySelector("" + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
+
 window.addEventListener("scroll", () => {
   const horizontalMenu = document.getElementById("main-menu");
-  horizontalMenu.classList.add("active");
+  if (window.scrollY > 0) {
+    horizontalMenu.classList.add("active");
+  } else {
+    horizontalMenu.classList.remove("active");
+  }
+  if (window.scrollY >= 400) {
+    linkScroll.classList.add("active");
+  } else {
+    linkScroll.classList.remove("active");
+  }
 });
