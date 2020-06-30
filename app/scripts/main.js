@@ -81,7 +81,7 @@ const navigationMenu = document.getElementById("navigation-menu");
 
 const navigationButtonOff = document.getElementById("btn-nav-off");
 
-const bodyWrap = document.getElementById("content-wrap");
+const bodyWrap = document.getElementById("menu-overlay");
 
 const body = document.getElementById("is-home");
 

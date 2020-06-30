@@ -428,7 +428,7 @@ input:checked + .slider:after {
   overflow: hidden;
 }
 
-#content-wrap {
+#menu-overlay {
   content: "";
   position: fixed;
   right: 0;
@@ -437,9 +437,9 @@ input:checked + .slider:after {
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  z-index: 1000;
   visibility: hidden;
   transition: all 0.3s ease;
+  z-index: -1;
   &.active {
     opacity: 1;
     visibility: visible;
@@ -452,7 +452,7 @@ a#anchor {
   position: fixed;
   top: 75%;
   right: 150px;
-  z-index: 1000000;
+  z-index: 4000;
   border-radius: 50%;
   background-color: $gray;
   visibility: hidden;
