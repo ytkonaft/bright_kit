@@ -2,7 +2,8 @@
 
 .features-one {
   padding: 6.3% 0;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -241,6 +242,7 @@
     &__content {
       padding: 7px 20px;
       margin: 0 auto;
+      margin-right: 10px;
       flex-direction: column;
       justify-content: center;
       text-align: center;
@@ -257,12 +259,23 @@
     .card-right,
     .card-left {
       margin: 0 auto;
+      margin-right: 10px;
     }
   }
 
   .features-two {
     &__imag-wrap {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .features-one {
+    .card-right,
+    .card-left,
+    &__content {
+      margin: 0 auto;
     }
   }
 }

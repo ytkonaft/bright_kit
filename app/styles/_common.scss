@@ -123,6 +123,11 @@ button {
   outline: 0 !important;
 }
 
+a[class^="btn-"],
+a[class*=" btn-"] {
+  display: inline-block;
+}
+
 .btn-xs {
   padding: 0 13px;
   font: $font-btn-extra-small;
@@ -169,6 +174,12 @@ button {
   padding: 0 112px;
   letter-spacing: -0.68px;
   border: $border-width-btn solid $black;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
 }
 
 .btn-subscribe-action {
@@ -212,6 +223,11 @@ button {
   border: $border-width-btn solid $primary;
   box-sizing: border-box;
   color: $primary;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 .btn-border-secondary {
@@ -411,4 +427,57 @@ input:checked + .slider:before {
 
 input:checked + .slider:after {
   transform: translateX(36px);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#menu-overlay {
+  content: "";
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: -1;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+a#anchor {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 0;
+  right: 6%;
+  z-index: 4000;
+  border-radius: 50%;
+  background-color: $primary;
+  color: $white;
+  visibility: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: $primary;
+    background-color: $secondary;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10%;
+  }
 }

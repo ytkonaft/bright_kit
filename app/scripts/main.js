@@ -1,7 +1,12 @@
 import $ from "jquery";
 import "slick-carousel";
 
-$(".testimonials-one .testimonials-one__slider-wrap").slick({
+const sliderSlick = [
+  ".testimonials-one .testimonials-one__slider-wrap",
+  ".features-one .features-one__slider-wrap",
+].join();
+
+$(sliderSlick).slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -69,3 +74,78 @@ $(".team-two .team-two__slider-wrap").slick({
     },
   ],
 });
+
+const navigationButton = document.getElementById("navigation-toggle-btn");
+
+const navigationMenu = document.getElementById("navigation-menu");
+
+const navigationButtonOff = document.getElementById("btn-nav-off");
+
+const bodyWrap = document.getElementById("menu-overlay");
+
+const body = document.getElementById("is-home");
+
+const linkScroll = document.getElementById("anchor");
+
+const horizontalMenu = document.getElementById("main-menu");
+
+function toogleClassBtn(btnEvent) {
+  return btnEvent.addEventListener("click", () => {
+    navigationButton.classList.toggle("active");
+    navigationMenu.classList.toggle("active");
+    bodyWrap.classList.toggle("active");
+    body.classList.toggle("overflow-hidden");
+  });
+}
+
+if (navigationButton) {
+  toogleClassBtn(navigationButton);
+}
+
+if (navigationButtonOff) {
+  toogleClassBtn(navigationButtonOff);
+}
+
+if (bodyWrap) {
+  bodyWrap.addEventListener("click", () => {
+    navigationMenu.classList.remove("active");
+    bodyWrap.classList.remove("active");
+    body.classList.remove("overflow-hidden");
+  });
+}
+
+function smoothScroll() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+
+smoothScroll();
+
+if (horizontalMenu) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      horizontalMenu.classList.add("active");
+    } else {
+      horizontalMenu.classList.remove("active");
+    }
+  });
+}
+
+if (linkScroll) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 400) {
+      linkScroll.classList.add("active");
+    } else {
+      linkScroll.classList.remove("active");
+    }
+  });
+}

@@ -1,6 +1,7 @@
 .pricing-one {
   padding: 8.83% 0;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,14 +41,8 @@
     padding: 0 25px;
     line-height: 44px;
     margin-left: 5px;
-
-    &:hover {
-      background-color: $primary;
-      color: $white;
-    }
   }
 
-  &__btn-monthly,
   &__btn-yearly {
     transition: all 0.3s ease;
   }
@@ -75,7 +70,8 @@
   .color-white {
     color: $white;
     border-color: $white;
-
+  }
+  .btn-white {
     &:hover {
       color: $black;
       background-color: $white;
@@ -112,11 +108,6 @@
   &__card-btn {
     @extend .btn-subscribe;
     padding: 0 25.41%;
-
-    &:hover {
-      color: $white;
-      background-color: $primary;
-    }
   }
 }
 
@@ -261,8 +252,10 @@
       margin: 0 auto;
     }
 
-    .card-primary {
-      margin-top: 45px;
+    &__card {
+      &.card-white {
+        margin-bottom: 35px;
+      }
     }
   }
 
