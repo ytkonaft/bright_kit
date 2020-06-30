@@ -123,6 +123,11 @@ button {
   outline: 0 !important;
 }
 
+a[class^="btn-"],
+a[class*=" btn-"] {
+  display: inline-block;
+}
+
 .btn-xs {
   padding: 0 13px;
   font: $font-btn-extra-small;
@@ -447,8 +452,8 @@ input:checked + .slider:after {
 }
 
 a#anchor {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   position: fixed;
   bottom: 0;
   right: 6%;
@@ -463,6 +468,7 @@ a#anchor {
   font-size: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &:hover {
     color: $primary;
