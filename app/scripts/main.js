@@ -2,7 +2,7 @@ import $ from "jquery";
 import "slick-carousel";
 
 const sliderSlick = [
-  ".testomonials-one .testomonials-one__slider-wrap",
+  ".testimonials-one .testimonials-one__slider-wrap",
   ".features-one .features-one__slider-wrap",
 ].join();
 
@@ -30,7 +30,7 @@ $(sliderSlick).slick({
   ],
 });
 
-$(".testomonials-two .testomonials-two__slider-wrap").slick({
+$(".testimonials-two .testimonials-two__slider-wrap").slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -87,6 +87,8 @@ const body = document.getElementById("is-home");
 
 const linkScroll = document.getElementById("anchor");
 
+const horizontalMenu = document.getElementById("main-menu");
+
 function toogleClassBtn(btnEvent) {
   return btnEvent.addEventListener("click", () => {
     navigationButton.classList.toggle("active");
@@ -112,29 +114,38 @@ if (bodyWrap) {
   });
 }
 
-const anchors = document.querySelectorAll('a[href*="#"]');
-
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function (event) {
-    event.preventDefault();
-    const blockID = anchor.getAttribute("href");
-    document.querySelector("" + blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+function smoothScroll() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
+  }
+}
+
+smoothScroll();
+
+if (horizontalMenu) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      horizontalMenu.classList.add("active");
+    } else {
+      horizontalMenu.classList.remove("active");
+    }
   });
 }
 
-window.addEventListener("scroll", () => {
-  const horizontalMenu = document.getElementById("main-menu");
-  if (window.scrollY > 0) {
-    horizontalMenu.classList.add("active");
-  } else {
-    horizontalMenu.classList.remove("active");
-  }
-  if (window.scrollY >= 400) {
-    linkScroll.classList.add("active");
-  } else {
-    linkScroll.classList.remove("active");
-  }
-});
+if (linkScroll) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 400) {
+      linkScroll.classList.add("active");
+    } else {
+      linkScroll.classList.remove("active");
+    }
+  });
+}

@@ -1,6 +1,6 @@
 @import "_vars";
 
-.testomonials-one {
+.testimonials-one {
   padding: 7.5% 0;
   height: 100%;
   min-height: 100%;
@@ -99,7 +99,7 @@
 
 //////////////////////////////////////////////
 
-.testomonials-two {
+.testimonials-two {
   padding: 100px 0;
   min-height: 100vh;
   width: 100%;
@@ -204,7 +204,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .testomonials-one {
+  .testimonials-one {
     .card-right {
       margin-right: 0;
     }
@@ -219,7 +219,7 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .testomonials-one {
+  .testimonials-one {
     .slick-dots {
       li {
         display: inline-block;
@@ -239,7 +239,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .testomonials-one {
+  .testimonials-one {
     .card-right {
       margin-right: 0px;
       margin-left: 10px;
@@ -256,7 +256,7 @@
     }
   }
 
-  .testomonials-two {
+  .testimonials-two {
     .title-h2 {
       font-size: 40px;
     }
@@ -272,7 +272,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .testomonials-two {
+  .testimonials-two {
     &__content {
       max-width: 500px;
     }
@@ -281,7 +281,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .testomonials-one {
+  .testimonials-one {
     &__title-wrap {
       margin-bottom: 30px;
     }
@@ -293,7 +293,7 @@
       margin-left: 0;
     }
   }
-  .testomonials-two {
+  .testimonials-two {
     .title-h2 {
       font-size: 25px;
     }
@@ -310,7 +310,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .testomonials-two {
+  .testimonials-two {
     &__content {
       max-width: 350px;
     }
@@ -323,7 +323,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .testomonials-one {
+  .testimonials-one {
     .card-right {
       margin-left: 10px;
     }
@@ -349,7 +349,7 @@
     }
   }
 
-  .testomonials-two {
+  .testimonials-two {
     .title-h2 {
       font-size: 22px;
     }
