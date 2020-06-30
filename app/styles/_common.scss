@@ -447,8 +447,8 @@ input:checked + .slider:after {
 }
 
 a#anchor {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   bottom: 0;
   right: 6%;
@@ -460,12 +460,13 @@ a#anchor {
   text-decoration: none;
   transition: all 0.3s ease;
   opacity: 0;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+
   &:hover {
     color: $primary;
     background-color: $secondary;
-  }
-  i {
-    font-size: 48px;
   }
 
   &.active {

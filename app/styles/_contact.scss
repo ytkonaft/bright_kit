@@ -47,10 +47,15 @@
     margin: 24px 0;
   }
 
+  &__phone {
+    width: 260px;
+  }
+
   &__link {
     @extend .text-bold;
     color: $black;
     transition: all 0.3s ease;
+    width: 238px;
   }
 
   &__social-link {
@@ -264,6 +269,14 @@
     &__img-wrap {
       padding-top: 50px;
     }
+
+    &__phone {
+      width: 226px;
+    }
+
+    &__link {
+      width: 208px;
+    }
   }
 
   .section-application {
@@ -306,6 +319,16 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .contact-one {
+    &__phone {
+      width: 201px;
+    }
+
+    &__link {
+      width: 186px;
+    }
+  }
+
   .section-application {
     .title-h2 {
       font-size: 40px;
