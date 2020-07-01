@@ -129,6 +129,29 @@
   a {
     text-decoration: none;
   }
+
+  &.active {
+    z-index: 5000;
+    right: 0;
+  }
+
+  .link-btn-off {
+    position: absolute;
+    right: 0;
+    padding: 20px 30px 0 0;
+  }
+
+  #btn-nav-off {
+    color: $black;
+    transition: all 0.3s ease;
+    height: 45px;
+    &:hover {
+      color: $primary;
+    }
+    i {
+      font-size: 45px;
+    }
+  }
 }
 
 // ///////////////////////////////////////////////////////////////////
