@@ -87,7 +87,11 @@ const body = document.getElementById("is-home");
 
 const linkScroll = document.getElementById("anchor");
 
+const linkScrollTwo = document.getElementById("is-anchor");
+
 const horizontalMenu = document.getElementById("main-menu");
+
+const horizontalMenuTwo = document.getElementById("head-menu");
 
 function toogleClassBtn(btnEvent) {
   return btnEvent.addEventListener("click", () => {
@@ -115,37 +119,55 @@ if (bodyWrap) {
 }
 
 function smoothScroll() {
-  const anchors = document.querySelectorAll('a[href*="#"]');
-  for (let anchor of anchors) {
-    anchor.addEventListener("click", function (event) {
-      event.preventDefault();
-      const blockID = anchor.getAttribute("href");
-      document.querySelector("" + blockID).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+  if (body) {
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    for (let anchor of anchors) {
+      anchor.addEventListener("click", function (event) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute("href");
+        document.querySelector(blockID).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       });
-    });
+    }
   }
 }
 
 smoothScroll();
 
-if (horizontalMenu) {
+function pageScroll(elem) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
-      horizontalMenu.classList.add("active");
+      elem.classList.add("active");
     } else {
-      horizontalMenu.classList.remove("active");
+      elem.classList.remove("active");
+    }
+  });
+}
+
+if (horizontalMenu) {
+  pageScroll(horizontalMenu);
+}
+
+if (horizontalMenuTwo) {
+  pageScroll(horizontalMenuTwo);
+}
+
+function smoothScrollLink(link) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 400) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
   });
 }
 
 if (linkScroll) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 400) {
-      linkScroll.classList.add("active");
-    } else {
-      linkScroll.classList.remove("active");
-    }
-  });
+  smoothScrollLink(linkScroll);
+}
+
+if (linkScrollTwo) {
+  smoothScrollLink(linkScrollTwo);
 }
