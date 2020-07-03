@@ -136,26 +136,13 @@ function smoothScroll() {
 
 smoothScroll();
 
-function pageScroll(elem) {
+function pageScroll(elem, link) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
       elem.classList.add("active");
     } else {
       elem.classList.remove("active");
     }
-  });
-}
-
-if (horizontalMenu) {
-  pageScroll(horizontalMenu);
-}
-
-if (horizontalMenuTwo) {
-  pageScroll(horizontalMenuTwo);
-}
-
-function smoothScrollLink(link) {
-  window.addEventListener("scroll", () => {
     if (window.scrollY >= 400) {
       link.classList.add("active");
     } else {
@@ -164,10 +151,53 @@ function smoothScrollLink(link) {
   });
 }
 
-if (linkScroll) {
-  smoothScrollLink(linkScroll);
+if (horizontalMenu) {
+  pageScroll(horizontalMenu, linkScroll);
 }
 
-if (linkScrollTwo) {
-  smoothScrollLink(linkScrollTwo);
+if (horizontalMenuTwo) {
+  pageScroll(horizontalMenuTwo, linkScrollTwo);
 }
+
+const checkbox = document.getElementById("checkbox");
+const sendBtn = document.getElementById("btn-send");
+
+checkbox.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    sendBtn.removeAttribute("disabled");
+  } else {
+    sendBtn.setAttribute("disabled", true);
+  }
+});
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const targetForm = event.target;
+  const name = targetForm.querySelector('[name="name"]');
+  const email = targetForm.querySelector('[name="email"]');
+  const message = targetForm.querySelector('[name="message"]');
+  console.log(name.value, email.value, message.value);
+});
+
+const check = document.getElementById("check");
+
+check.addEventListener("change", (event) => {
+  const isChecked = event.target.checked;
+  const mult = event.target.value;
+  const elementsIds = event.target.getAttribute("data-for");
+  const idsArray = elementsIds.split(",").map((itm) => itm.trim());
+  idsArray.forEach((id) => {
+    const priceElem = document.getElementById(id);
+    const initValue = priceElem.innerHTML;
+    const multiply = parseInt(initValue) * mult;
+    const division = parseInt(initValue) / mult;
+
+    if (isChecked) {
+      priceElem.innerHTML = multiply; //промлемы с символом $
+    } else {
+      priceElem.innerHTML = division;
+    }
+  });
+});

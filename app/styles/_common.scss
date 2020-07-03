@@ -452,8 +452,8 @@ input:checked + .slider:after {
   }
 }
 
-a#anchor,
-a#is-anchor {
+a.anchor,
+a.is-anchor {
   width: 48px;
   height: 48px;
   position: fixed;
