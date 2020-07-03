@@ -93,7 +93,7 @@ const horizontalMenu = document.getElementById("main-menu");
 
 const horizontalMenuTwo = document.getElementById("head-menu");
 
-function toogleClassBtn(btnEvent) {
+function toggleClassBtn(btnEvent) {
   return btnEvent.addEventListener("click", () => {
     navigationButton.classList.toggle("active");
     navigationMenu.classList.toggle("active");
@@ -103,11 +103,11 @@ function toogleClassBtn(btnEvent) {
 }
 
 if (navigationButton) {
-  toogleClassBtn(navigationButton);
+  toggleClassBtn(navigationButton);
 }
 
 if (navigationButtonOff) {
-  toogleClassBtn(navigationButtonOff);
+  toggleClassBtn(navigationButtonOff);
 }
 
 if (bodyWrap) {
@@ -119,85 +119,100 @@ if (bodyWrap) {
 }
 
 function smoothScroll() {
-  if (body) {
-    const anchors = document.querySelectorAll('a[href*="#"]');
-    for (let anchor of anchors) {
-      anchor.addEventListener("click", function (event) {
-        event.preventDefault();
-        const blockID = anchor.getAttribute("href");
-        document.querySelector(blockID).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
-    }
+    });
   }
 }
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-smoothScroll();
+if (anchors.length > 0) {
+  smoothScroll(anchors);
+}
 
-function pageScroll(elem, link) {
+function setScrollListener(elem, activeClass, startPosition) {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      elem.classList.add("active");
+    if (window.scrollY > startPosition) {
+      elem.classList.add(activeClass);
     } else {
-      elem.classList.remove("active");
-    }
-    if (window.scrollY >= 400) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+      elem.classList.remove(activeClass);
     }
   });
 }
 
 if (horizontalMenu) {
-  pageScroll(horizontalMenu, linkScroll);
+  setScrollListener(horizontalMenu, "active", 0);
+  setScrollListener(linkScroll, "active", 400);
 }
 
 if (horizontalMenuTwo) {
-  pageScroll(horizontalMenuTwo, linkScrollTwo);
+  setScrollListener(horizontalMenuTwo, "active", 0);
+  setScrollListener(linkScrollTwo, "active", 400);
+}
+
+function eventSubmit(elem) {
+  elem.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const targetForm = event.target;
+    const name = targetForm.querySelector('[name="name"]').value;
+    const email = targetForm.querySelector('[name="email"]').value;
+    const message = targetForm.querySelector('[name="message"]').value;
+    console.log({ name, email, message });
+  });
+}
+
+const form = document.getElementById("form");
+
+if (form) {
+  eventSubmit(form);
+}
+
+function btnDisabled(elem, btn) {
+  elem.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      btn.removeAttribute("disabled");
+    } else {
+      btn.setAttribute("disabled", true);
+    }
+  });
 }
 
 const checkbox = document.getElementById("checkbox");
 const sendBtn = document.getElementById("btn-send");
 
-checkbox.addEventListener("change", (event) => {
-  if (event.target.checked) {
-    sendBtn.removeAttribute("disabled");
-  } else {
-    sendBtn.setAttribute("disabled", true);
-  }
-});
+if (checkbox) {
+  btnDisabled(checkbox, sendBtn);
+}
 
-const form = document.getElementById("form");
+function eventChange(elem) {
+  elem.addEventListener("change", (event) => {
+    const isChecked = event.target.checked;
+    const mult = event.target.value;
+    const elementsIds = event.target.getAttribute("data-for");
+    const idsArray = elementsIds.split(",").map((itm) => itm.trim());
+    idsArray.forEach((id) => {
+      const priceElem = document.getElementById(id);
+      const initValue = priceElem.innerHTML;
+      const multiply = parseInt(initValue) * mult;
+      const division = parseInt(initValue) / mult;
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const targetForm = event.target;
-  const name = targetForm.querySelector('[name="name"]');
-  const email = targetForm.querySelector('[name="email"]');
-  const message = targetForm.querySelector('[name="message"]');
-  console.log(name.value, email.value, message.value);
-});
+      if (isChecked) {
+        priceElem.innerHTML = multiply;
+      } else {
+        priceElem.innerHTML = division;
+      }
+    });
+  });
+}
 
 const check = document.getElementById("check");
 
-check.addEventListener("change", (event) => {
-  const isChecked = event.target.checked;
-  const mult = event.target.value;
-  const elementsIds = event.target.getAttribute("data-for");
-  const idsArray = elementsIds.split(",").map((itm) => itm.trim());
-  idsArray.forEach((id) => {
-    const priceElem = document.getElementById(id);
-    const initValue = priceElem.innerHTML;
-    const multiply = parseInt(initValue) * mult;
-    const division = parseInt(initValue) / mult;
-
-    if (isChecked) {
-      priceElem.innerHTML = multiply; //промлемы с символом $
-    } else {
-      priceElem.innerHTML = division;
-    }
-  });
-});
+if (check) {
+  eventChange(check);
+}
