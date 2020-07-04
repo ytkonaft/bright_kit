@@ -1,4 +1,4 @@
-function eventSubmit(elem) {
+function formSubmitListener(elem) {
   elem.addEventListener("submit", (event) => {
     event.preventDefault();
     const targetForm = event.target;
@@ -9,4 +9,4 @@ function eventSubmit(elem) {
   });
 }
 
-export default eventSubmit;
+export default formSubmitListener;

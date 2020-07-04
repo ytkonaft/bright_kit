@@ -243,11 +243,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    i {
-      font-size: 34px;
-      color: $black;
-    }
+    font-size: 34px;
+    color: $black;
 
     &:hover {
       background-color: $primary;
@@ -256,8 +253,7 @@
   }
   &__behance,
   &__dribble,
-  &__twitter,
-  i {
+  &__twitter {
     transition: all 0.3s ease;
   }
 }

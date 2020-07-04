@@ -162,8 +162,11 @@
     }
   }
 
-  a:not([href]) {
+  a {
     text-decoration: none;
+  }
+
+  a:not([href]) {
     color: $black;
     &:hover {
       color: $primary;

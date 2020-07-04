@@ -221,6 +221,10 @@
   }
 
   .features-two {
+    &__title {
+      font-size: 55px;
+    }
+
     &__card {
       margin-right: 0;
       margin-bottom: 24px;
@@ -264,6 +268,10 @@
   }
 
   .features-two {
+    &__title {
+      font-size: 50px;
+    }
+
     &__imag-wrap {
       display: none;
     }
@@ -299,6 +307,10 @@
   }
 
   .features-two {
+    &__title {
+      font-size: 35px;
+    }
+
     &__content {
       max-width: 100%;
       padding: 0 10px;

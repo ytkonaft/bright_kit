@@ -1,4 +1,4 @@
-function smoothScroll(anchors) {
+function initSmoothScroll(anchors) {
   for (let anchor of anchors) {
     anchor.addEventListener("click", function (event) {
       event.preventDefault();
@@ -11,4 +11,4 @@ function smoothScroll(anchors) {
   }
 }
 
-export default smoothScroll;
+export default initSmoothScroll;

@@ -80,6 +80,12 @@
   &__btn {
     @extend .btn-subscribe-action;
     margin-bottom: 23px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
 
   .primary-text {
@@ -203,6 +209,11 @@
     }
     &__action-text {
       margin: 18px 0;
+    }
+  }
+  .action-two {
+    &__btn {
+      padding: 0 32px;
     }
   }
 }
