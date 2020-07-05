@@ -101,7 +101,7 @@
 
 .section-application {
   padding: 100px 0;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -174,8 +174,14 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: $secondary;
+      background-color: pink;
       color: $gray;
+    }
+
+    &:disabled {
+      background-color: $gray;
+      opacity: 0.7;
+      color: $white;
     }
   }
 
@@ -237,11 +243,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    i {
-      font-size: 34px;
-      color: $black;
-    }
+    font-size: 34px;
+    color: $black;
 
     &:hover {
       background-color: $primary;
@@ -250,8 +253,7 @@
   }
   &__behance,
   &__dribble,
-  &__twitter,
-  i {
+  &__twitter {
     transition: all 0.3s ease;
   }
 }

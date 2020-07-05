@@ -6,6 +6,10 @@
   padding: 24px 0;
   display: inline-block;
   background-color: $light-gray;
+
+  &.active {
+    padding: 5px 0 5px 0;
+  }
 }
 
 .horizontal-menu-one {
@@ -72,6 +76,10 @@
 ////////////////////////////
 
 .horizontal-menu-two {
+  position: fixed;
+  z-index: 800;
+  transition: all 0.3s ease;
+
   &__logo {
     height: 100%;
     display: flex;
@@ -138,8 +146,31 @@
     }
   }
 
+  &__menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    visibility: hidden;
+    font-size: 32px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
   a {
     text-decoration: none;
+  }
+
+  a:not([href]) {
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
   }
 }
 
@@ -156,7 +187,7 @@
 
   .horizontal-menu-two {
     &__menu-item {
-      margin-right: 30px;
+      margin-right: 22px;
     }
   }
 }
@@ -181,6 +212,9 @@
     &__menu-item {
       display: none;
     }
+    &__menu-icon {
+      visibility: visible;
+    }
   }
 }
 
@@ -197,7 +231,7 @@
 
   .horizontal-menu-two {
     &__logo {
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 }

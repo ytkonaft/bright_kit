@@ -97,6 +97,17 @@
   justify-content: space-around;
 }
 
+.horizontal-menu-one,
+.horizontal-menu-two {
+  position: static;
+}
+
+.vertical-menu-one,
+.vertical-menu-two {
+  max-width: 355px;
+  position: static;
+}
+
 // link
 .section-link {
   padding: 30px 0;

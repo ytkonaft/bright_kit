@@ -1,151 +1,72 @@
 import $ from "jquery";
 import "slick-carousel";
 
+import menuToggleListener from "./menu-toggle-listener";
+import initSmoothScroll from "./smooth-scroll";
+import setScrollListener from "./set-scroll-listener";
+import formSubmitListener from "./submit-listener";
+import btnDisabled from "./btn-disabled";
+import eventChange from "./event-change";
+import slickOptions from "./constants/slick-options";
+
 const sliderSlick = [
   ".testimonials-one .testimonials-one__slider-wrap",
   ".features-one .features-one__slider-wrap",
 ].join();
 
-$(sliderSlick).slick({
-  dots: true,
-  arrows: false,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
-
-$(".testimonials-two .testimonials-two__slider-wrap").slick({
-  dots: true,
-  arrows: false,
-  infinite: true,
-  centerMode: true,
-  variableWidth: true,
-  slidesToShow: 1,
-});
-
-$(".team-two .team-two__slider-wrap").slick({
-  dots: false,
-  arrows: true,
-  infinite: true,
-  prevArrow:
-    "<button class='slick-prev'><i class='icon-chevron-back'></i></button>",
-  nextArrow:
-    "<button class='slick-next'><i class='icon-chevron-forward'></i></button>",
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1100,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      breakpoint: 780,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
+$(sliderSlick).slick(slickOptions.testimonialsOne);
+$(".testimonials-two .testimonials-two__slider-wrap").slick(
+  slickOptions.testimonialsTwo
+);
+$(".team-two .team-two__slider-wrap").slick(slickOptions.team);
 
 const navigationButton = document.getElementById("navigation-toggle-btn");
-
 const navigationMenu = document.getElementById("navigation-menu");
-
 const navigationButtonOff = document.getElementById("btn-nav-off");
+const menuOverlay = document.getElementById("menu-overlay");
 
-const bodyWrap = document.getElementById("menu-overlay");
+if (navigationMenu) {
+  menuToggleListener(navigationButton, navigationMenu, menuOverlay);
+  menuToggleListener(navigationButtonOff, navigationMenu, menuOverlay);
+  menuToggleListener(menuOverlay, navigationMenu, menuOverlay);
+}
 
-const body = document.getElementById("is-home");
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-const linkScroll = document.getElementById("anchor");
+if (anchors.length > 0) {
+  initSmoothScroll(anchors);
+}
 
 const horizontalMenu = document.getElementById("main-menu");
-
-function toogleClassBtn(btnEvent) {
-  return btnEvent.addEventListener("click", () => {
-    navigationButton.classList.toggle("active");
-    navigationMenu.classList.toggle("active");
-    bodyWrap.classList.toggle("active");
-    body.classList.toggle("overflow-hidden");
-  });
-}
-
-if (navigationButton) {
-  toogleClassBtn(navigationButton);
-}
-
-if (navigationButtonOff) {
-  toogleClassBtn(navigationButtonOff);
-}
-
-if (bodyWrap) {
-  bodyWrap.addEventListener("click", () => {
-    navigationMenu.classList.remove("active");
-    bodyWrap.classList.remove("active");
-    body.classList.remove("overflow-hidden");
-  });
-}
-
-function smoothScroll() {
-  const anchors = document.querySelectorAll('a[href*="#"]');
-  for (let anchor of anchors) {
-    anchor.addEventListener("click", function (event) {
-      event.preventDefault();
-      const blockID = anchor.getAttribute("href");
-      document.querySelector("" + blockID).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }
-}
-
-smoothScroll();
+const horizontalMenuTwo = document.getElementById("head-menu");
+const linkScroll = document.getElementById("anchor");
+const linkScrollTwo = document.getElementById("is-anchor");
 
 if (horizontalMenu) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      horizontalMenu.classList.add("active");
-    } else {
-      horizontalMenu.classList.remove("active");
-    }
-  });
+  setScrollListener(horizontalMenu, "active", 0);
+  setScrollListener(linkScroll, "active", 400);
 }
 
-if (linkScroll) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 400) {
-      linkScroll.classList.add("active");
-    } else {
-      linkScroll.classList.remove("active");
-    }
-  });
+if (horizontalMenuTwo) {
+  setScrollListener(horizontalMenuTwo, "active", 0);
+  setScrollListener(linkScrollTwo, "active", 400);
+}
+
+const form = document.getElementById("form");
+
+if (form) {
+  formSubmitListener(form);
+}
+
+const checkbox = document.getElementById("checkbox");
+const sendBtn = document.getElementById("btn-send");
+
+if (checkbox) {
+  btnDisabled(checkbox, sendBtn);
+}
+
+const priceCheckbox = document.getElementById("check");
+
+if (priceCheckbox) {
+  eventChange(priceCheckbox);
 }

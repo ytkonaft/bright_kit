@@ -115,7 +115,7 @@
 
 .pricing-two {
   padding: 100px 0;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -273,6 +273,7 @@
       flex-direction: column;
       text-align: center;
       margin-bottom: 30px;
+      align-items: center;
     }
 
     &__card-content {
