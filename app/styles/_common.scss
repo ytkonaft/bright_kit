@@ -189,34 +189,73 @@ a[class*=" btn-"] {
   border: $border-width-btn solid $black;
 }
 
+.btn-primary,
+.btn,
+.btn-black,
+.btn-secondary,
+.btn-white,
+.btn-border-black,
+.btn-border-primary,
+.btn-border-secondary {
+  transition: all 0.3s ease;
+}
+
 .btn {
   background-color: $white;
   color: $black;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 .btn-white {
   color: $white;
   border: $border-width-btn solid $white;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: $gray;
+    color: $light-gray;
+  }
 }
 
 .btn-black {
   color: $white;
   background-color: $black;
+  &:hover {
+    background-color: $gray;
+    color: black;
+  }
 }
 
 .btn-primary {
   color: $white;
   background-color: $primary;
+
+  &:hover {
+    background-color: pink;
+  }
 }
 
 .btn-secondary {
   background-color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 .btn-border-black {
   border: $border-width-btn solid $black;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
 }
 
 .btn-border-primary {
@@ -234,6 +273,11 @@ a[class*=" btn-"] {
   border: $border-width-btn solid $secondary;
   box-sizing: border-box;
   color: $secondary;
+
+  &:hover {
+    background-color: $secondary;
+    color: $black;
+  }
 }
 
 a.link-btn {
@@ -243,6 +287,7 @@ a.link-btn {
   justify-content: center;
   margin-bottom: 30px;
   &:hover {
+    color: pink;
     text-decoration: none;
   }
   i {
